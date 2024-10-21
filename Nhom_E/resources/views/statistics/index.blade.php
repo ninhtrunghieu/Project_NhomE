@@ -27,12 +27,6 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Danh sách danh mục</h3>
-                    <a style="margin-left: 20px;" href="{{ route('statistics.create') }}" class="btn btn-warning">Thêm mới</a>
-                </div>
-                @if (session('status'))
-                <p class="text-warning" style="margin:0px;padding:0px;margin-left:20px">
-                    {{ session('status') }}
-                </p>
                 @endif
                 <div class="card-body">
                     <table id="example1" class="table table-bordered table-striped">
@@ -48,17 +42,6 @@
                         </thead>
                         <tbody>
                             @foreach($datas as $item)
-                            <tr>
-                                <td>{{ $item->order_date }}</td>
-                                <td>{{ number_format($item->sales) }} đồng</td>
-                                <td>{{ number_format($item->profit) }} đồng</td>
-                                <td>{{ $item->quantity }}</td>
-                                <td>{{ $item->total_order }}</td>
-                                <td>
-                                    <a href="{{ route('statistics.edit',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="icon ion-android-create"></i></a>
-                                    <a href="{{ route('statistics.delete',['id' => $item->id]) }}" class="btn btn-sm btn-danger"><i class="icon ion-android-delete"></i></a>
-                                </td>
-                            </tr>
                             @endforeach
                         </tbody>
                         <tfoot>

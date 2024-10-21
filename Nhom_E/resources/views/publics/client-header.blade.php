@@ -32,7 +32,6 @@
                 <!-- search-->
                 <div id="search_widget" class="col-sm-6 col-md-5 align-items-center justify-content-end d-flex">
                     <form method="get" action="/search">
-                        <input type="text" name="keyword" placeholder="Nhập từ khóa tìm kiếm" class="ui-autocomplete-input" autocomplete="onl">
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
@@ -49,41 +48,7 @@
                         </div>
                         <div id="acount" class="collapse">
                             <div class="account-list-content">
-                                @if(Session::get('customer'))
-                                <div>
-                                    <a>
-                                        <span>Xin chào: {{Session::get('customer')[0]->name}}</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a class="check-out" href="/order-info" rel="nofollow" title="Checkout">
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <span>Thông tin đặt hàng</span>
-                                    </a>
-                                </div>
-                                @endif
-                                @if(!Session::get('customer'))
-                                <div>
-                                    <a class="login" href="/login" rel="nofollow" title="Log in to your customer account">
-                                        <i class="fa fa-sign-in"></i>
-                                        <span>Đăng nhập</span>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a class="register" href="/register" rel="nofollow" title="Register Account">
-                                        <i class="fa fa-user"></i>
-                                        <span>Đăng ký</span>
-                                    </a>
-                                </div>
-                                @endif
-                                @if(Session::get('customer'))
-                                <div>
-                                    <a href="/logout">
-                                        <i class="fa fa-sign-in"></i>
-                                        <span>Đăng xuất</span>
-                                    </a>
-                                </div>
-                                @endif                             
+
                             </div>
                         </div>
                     </div>

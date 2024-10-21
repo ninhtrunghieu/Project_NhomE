@@ -1,7 +1,4 @@
 <?php
-use Illuminate\Support\Facades\Session;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +11,19 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
-<<<<<<< HEAD
-Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
-Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
+Route::get('/', action: 'App\Http\Controllers\HomeController@index');
+
+Route::get('/login-admin', action: 'App\Http\Controllers\AuthController@login_index');
+Route::post('/login-admin', action: 'App\Http\Controllers\AuthController@login_post');
 
 
 Route::get('/admin', function () {
     $user = Session::get('user_admin');
-    if(!$user){
+    if (!$user) {
         return redirect('/login-admin');
-    }
-    else{
+    } else {
+
         return view('admin');
     }
     return view('admin');
@@ -36,28 +33,28 @@ Route::get('/admin', function () {
 
 Route::prefix('categories')->group(function () {
     Route::get('/index', [
-    	'as'=>'categories.index',
-    	'uses'=>'App\Http\Controllers\CategoryController@index'
+        'as' => 'categories.index',
+        'uses' => 'App\Http\Controllers\CategoryController@index'
     ]);
     Route::get('/create', [
-    	'as'=>'categories.create',
-    	'uses'=>'App\Http\Controllers\CategoryController@create'
+        'as' => 'categories.create',
+        'uses' => 'App\Http\Controllers\CategoryController@create'
     ]);
     Route::post('/save', [
-    	'as'=>'categories.save',
-    	'uses'=>'App\Http\Controllers\CategoryController@save'
+        'as' => 'categories.save',
+        'uses' => 'App\Http\Controllers\CategoryController@save'
     ]);
     Route::get('/edit/{id}', [
-    	'as'=>'categories.edit',
-    	'uses'=>'App\Http\Controllers\CategoryController@edit'
+        'as' => 'categories.edit',
+        'uses' => 'App\Http\Controllers\CategoryController@edit'
     ]);
     Route::post('/saveedit/{id}', [
-    	'as'=>'categories.saveedit',
-    	'uses'=>'App\Http\Controllers\CategoryController@saveedit'
+        'as' => 'categories.saveedit',
+        'uses' => 'App\Http\Controllers\CategoryController@saveedit'
     ]);
     Route::get('/delete/{id}', [
-    	'as'=>'categories.delete',
-    	'uses'=>'App\Http\Controllers\CategoryController@delete'
+        'as' => 'categories.delete',
+        'uses' => 'App\Http\Controllers\CategoryController@delete'
     ]);
 });
 
@@ -65,44 +62,127 @@ Route::prefix('categories')->group(function () {
 
 Route::prefix('products')->group(function () {
     Route::get('/index', [
-    	'as'=>'products.index',
-    	'uses'=>'App\Http\Controllers\ProductController@index'
+        'as' => 'products.index',
+        'uses' => 'App\Http\Controllers\ProductController@index'
     ]);
     Route::get('/create', [
-    	'as'=>'products.create',
-    	'uses'=>'App\Http\Controllers\ProductController@create'
+        'as' => 'products.create',
+        'uses' => 'App\Http\Controllers\ProductController@create'
     ]);
     Route::post('/save', [
-    	'as'=>'products.save',
-    	'uses'=>'App\Http\Controllers\ProductController@save'
+        'as' => 'products.save',
+        'uses' => 'App\Http\Controllers\ProductController@save'
     ]);
     Route::get('/edit/{id}', [
-    	'as'=>'products.edit',
-    	'uses'=>'App\Http\Controllers\ProductController@edit'
+        'as' => 'products.edit',
+        'uses' => 'App\Http\Controllers\ProductController@edit'
     ]);
     Route::post('/saveedit/{id}', [
-    	'as'=>'products.saveedit',
-    	'uses'=>'App\Http\Controllers\ProductController@saveedit'
+        'as' => 'products.saveedit',
+        'uses' => 'App\Http\Controllers\ProductController@saveedit'
     ]);
     Route::get('/delete/{id}', [
-    	'as'=>'products.delete',
-    	'uses'=>'App\Http\Controllers\ProductController@delete'
+        'as' => 'products.delete',
+        'uses' => 'App\Http\Controllers\ProductController@delete'
     ]);
 });
-=======
->>>>>>> chi_tiet_gio_hang
-Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
-Route::post('/add-to-cart', action:'App\Http\Controllers\CartController@savecart');
-Route::get('/load-cart', action:'App\Http\Controllers\CartController@loadcart');
-<<<<<<< HEAD
-Route::get('/info-cart', action:'App\Http\Controllers\CartController@infocart');
-Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
-Route::get('/search', action:'App\Http\Controllers\HomeController@search');
-=======
-Route::get('/cart-detail', action:'App\Http\Controllers\CartController@detailcart');
-Route::post('/update-cart', action:'App\Http\Controllers\CartController@update_cart');
-Route::get('/delete-p/{session_id}', action:'App\Http\Controllers\CartController@delete_cart');
-Route::get('/delete-all-p', action:'App\Http\Controllers\CartController@delete_all_product');
 
-Route::get('/search', action:'App\Http\Controllers\HomeController@search');
->>>>>>> chi_tiet_gio_hang
+Route::prefix('orders')->group(function () {
+    Route::post('/save-order', [
+        'as' => 'orders.save',
+        'uses' => 'App\Http\Controllers\OrderController@save'
+    ]);
+    Route::post('/change-status', [
+        'as' => 'orders.status',
+        'uses' => 'App\Http\Controllers\OrderController@change'
+    ]);
+    Route::get('/export-to-word/{id}', [
+        'as' => 'orders.export',
+        'uses' => 'App\Http\Controllers\OrderController@exporttoword'
+    ]);
+    Route::get('/index', [
+        'as' => 'orders.index',
+        'uses' => 'App\Http\Controllers\OrderController@index'
+    ]);
+});
+
+Route::prefix('categories')->group(function () {
+    Route::get('/index', [
+        'as' => 'categories.index',
+        'uses' => 'App\Http\Controllers\CategoryController@index'
+    ]);
+    Route::get('/create', [
+        'as' => 'categories.create',
+        'uses' => 'App\Http\Controllers\CategoryController@create'
+    ]);
+    Route::post('/save', [
+        'as' => 'categories.save',
+        'uses' => 'App\Http\Controllers\CategoryController@save'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'categories.edit',
+        'uses' => 'App\Http\Controllers\CategoryController@edit'
+    ]);
+    Route::post('/saveedit/{id}', [
+        'as' => 'categories.saveedit',
+        'uses' => 'App\Http\Controllers\CategoryController@saveedit'
+    ]);
+    Route::get('/delete/{id}', [
+        'as' => 'categories.delete',
+        'uses' => 'App\Http\Controllers\CategoryController@delete'
+    ]);
+});
+
+Route::prefix('statistics')->group(function () {
+    Route::get('/index', [
+        'as' => 'statistics.index',
+        'uses' => 'App\Http\Controllers\StatisticalController@index'
+    ]);
+    Route::get('/create', [
+        'as' => 'statistics.create',
+        'uses' => 'App\Http\Controllers\StatisticalController@create'
+    ]);
+    Route::post('/save', [
+        'as' => 'statistics.save',
+        'uses' => 'App\Http\Controllers\StatisticalController@save'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'statistics.edit',
+        'uses' => 'App\Http\Controllers\StatisticalController@edit'
+    ]);
+    Route::post('/saveedit/{id}', [
+        'as' => 'statistics.saveedit',
+        'uses' => 'App\Http\Controllers\StatisticalController@saveedit'
+    ]);
+    Route::get('/delete/{id}', [
+        'as' => 'statistics.delete',
+        'uses' => 'App\Http\Controllers\StatisticalController@delete'
+    ]);
+});
+
+Route::prefix('products')->group(function () {
+    Route::get('/index', [
+        'as' => 'products.index',
+        'uses' => 'App\Http\Controllers\ProductController@index'
+    ]);
+    Route::get('/create', [
+        'as' => 'products.create',
+        'uses' => 'App\Http\Controllers\ProductController@create'
+    ]);
+    Route::post('/save', [
+        'as' => 'products.save',
+        'uses' => 'App\Http\Controllers\ProductController@save'
+    ]);
+    Route::get('/edit/{id}', [
+        'as' => 'products.edit',
+        'uses' => 'App\Http\Controllers\ProductController@edit'
+    ]);
+    Route::post('/saveedit/{id}', [
+        'as' => 'products.saveedit',
+        'uses' => 'App\Http\Controllers\ProductController@saveedit'
+    ]);
+    Route::get('/delete/{id}', [
+        'as' => 'products.delete',
+        'uses' => 'App\Http\Controllers\ProductController@delete'
+    ]);
+});

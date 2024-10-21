@@ -61,9 +61,6 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
-                                                <span>Danh sách sản phẩm</span>
-                                            </a>
                                         </li>
                                     </ol>
                                 </div>
@@ -116,7 +113,7 @@
                                                     <div class="item text-center col-md-4">
                                                         <div class="product-miniature js-product-miniature item-one first-item">
                                                             <div class="thumbnail-container border">
-                                                                <a href="/detail/{{$key->id}}">
+
                                                                     <img class="img-fluid image-cover" src="/images/{{$key->images}}" alt="img">
                                                                     <img class="img-fluid image-secondary" src="/images/{{$key->images}}" alt="img">
                                                                 </a>                                                               
@@ -124,7 +121,7 @@
                                                             <div class="product-description">
                                                                 <div class="product-groups">
                                                                     <div class="product-title">
-                                                                        <a href="/detail/{{$key->id}}">{{$key->name}}</a>
+
                                                                     </div>
                                                                     <div class="rating">
                                                                         <div class="star-content">

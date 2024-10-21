@@ -9,7 +9,6 @@
                                 <p class="logo-footer">
                                     <img src="{{asset('client_template/img/home/logo.png')}}" alt="img">
                                 </p>
-                                <p class="content-logo">Chào mừng bạn đến mới sàn thương mại điện tử chuyên về các sản phẩm đồ nội thất của chúng tôi.
                                 </p>
                             </div>
                         </div>
@@ -34,7 +33,6 @@
                         <div class="block">
                             <div class="block-content">
                                 <p class="img-payment ">
-                                    <img class="img-fluid" src="{{ asset('client_template/img/home/payment-footer.png') }}" alt="img">
                                 </p>
                             </div>
                         </div>
@@ -60,7 +58,6 @@
                                         <span>Email :</span>
                                     </div>
                                     <div class="content-contact mail-contact">
-                                        <p>vuchungdunghlym@gmail.com</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -94,9 +91,6 @@
                                 <div class="block-newsletter">
                                     <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" name="email" value="" placeholder="Enter Your Email">
-                                            <span class="input-group-btn">
-                                                <button class="effect-btn btn btn-secondary " name="submitNewsletter" type="submit">
                                                     <span>Theo dõi</span>
                                                 </button>
                                             </span>
@@ -148,7 +142,6 @@
                                         Payment accept
                                     </div>
                                     <div class="payment-image">
-                                        <img class="img-fluid" src="{{ asset('client_template/img/home/payment.png') }}" alt="img">
                                     </div>
                                 </div>
                                 <!-- Popup newsletter -->
@@ -164,7 +157,6 @@
             <div class="row">
                 <div class="text-center col-lg-12 ">
                     <span>
-                        Copyright © 2018. Design by VuChungDung. All Rights Reserved.
                     </span>
                 </div>
             </div>
@@ -174,29 +166,24 @@
 <script src="{{ asset('client_template/libs/jquery/jquery.min.js') }}"></script>
 
 <script>
-    $(document).ready(function() {
         function onLoad() {
             $.ajax({
                 url: "{{url('/load-cart')}}",
                 method: 'get',
                 data: {},
-                success: function(res) {
                     if (res) {
                         $('#show_cart').empty();
                         $('#show_cart').append(res);
                     }
-                    else{
                         $('#show_cart').empty();
                         $('#show_cart').append("Chưa có sản phẩm nào!");
                     }
                 },
-                error: function(mess) {
                     console.log(mess);
                 }
             });
         }
         onLoad();
-        $('#add-to-cart').on('click', function() {
             var id = $(this).data('id_product');
             var count = $('#quantity_wanted').val();
             var count_product = $('#count_product').val();
@@ -214,7 +201,6 @@
                         id,
                         count
                     },
-                    success: function(res) {
                         if (res) {
                             $('#show_cart').empty();
                             $('#show_cart').append(res);
@@ -222,7 +208,6 @@
                             toastr.success('Thêm sản phẩm vào giỏ hàng thành công!');
                         }
                     },
-                    error: function(mess) {
                         console.log(mess);
                     }
                 })
