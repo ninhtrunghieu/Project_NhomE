@@ -4,9 +4,6 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-<<<<<<< HEAD
-   
-=======
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -25,7 +22,6 @@
     </div>
     <!-- /.content-header -->
     <!-- Main content -->
->>>>>>> them_gio_hang
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -116,18 +112,10 @@
                     </form>
 
                 </div>
-<<<<<<< HEAD
-           
-=======
                 <!-- /.card-body -->
->>>>>>> them_gio_hang
             </div>
         </div><!-- /.container-fluid -->
     </div>
-<<<<<<< HEAD
-
-=======
     <!-- /.content -->
->>>>>>> them_gio_hang
 </div>
 @endsection

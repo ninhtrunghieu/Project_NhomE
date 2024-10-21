@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
+<<<<<<< HEAD
 Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
 Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
 
@@ -88,9 +89,20 @@ Route::prefix('products')->group(function () {
     	'uses'=>'App\Http\Controllers\ProductController@delete'
     ]);
 });
+=======
+>>>>>>> chi_tiet_gio_hang
 Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 Route::post('/add-to-cart', action:'App\Http\Controllers\CartController@savecart');
 Route::get('/load-cart', action:'App\Http\Controllers\CartController@loadcart');
+<<<<<<< HEAD
 Route::get('/info-cart', action:'App\Http\Controllers\CartController@infocart');
 Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
 Route::get('/search', action:'App\Http\Controllers\HomeController@search');
+=======
+Route::get('/cart-detail', action:'App\Http\Controllers\CartController@detailcart');
+Route::post('/update-cart', action:'App\Http\Controllers\CartController@update_cart');
+Route::get('/delete-p/{session_id}', action:'App\Http\Controllers\CartController@delete_cart');
+Route::get('/delete-all-p', action:'App\Http\Controllers\CartController@delete_all_product');
+
+Route::get('/search', action:'App\Http\Controllers\HomeController@search');
+>>>>>>> chi_tiet_gio_hang

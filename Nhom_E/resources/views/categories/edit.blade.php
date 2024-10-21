@@ -10,28 +10,17 @@
 			<div class="row mb-2">
 				<div class="col-sm-6">
 					<h1 class="m-0 text-dark">Danh sách danh mục</h1>
-<<<<<<< HEAD
-				</div>
-=======
 				</div><!-- /.col -->
->>>>>>> them_gio_hang
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
 						<li class="breadcrumb-item active">Danh sách danh mục</li>
 					</ol>
-<<<<<<< HEAD
-				</div>
-			</div>
-		</div>
-	</div>
-=======
 				</div><!-- /.col -->
 			</div><!-- /.row -->
 		</div><!-- /.container-fluid -->
 	</div>
 	<!-- /.content-header -->
->>>>>>> them_gio_hang
 	<!-- Main content -->
 	<div class="content">
 		<div class="container-fluid">
@@ -66,16 +55,10 @@
 					</p>
 					@endif
 				</div>
-<<<<<<< HEAD
-			</div>
-		</div>
-	</div>
-=======
 				<!-- /.card-body -->
 			</div>
 		</div><!-- /.container-fluid -->
 	</div>
 	<!-- /.content -->
->>>>>>> them_gio_hang
 </div>
 @endsection
