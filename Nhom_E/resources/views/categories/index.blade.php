@@ -4,15 +4,6 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-<<<<<<< HEAD
-
-    <div class="content">
-        <div class="container-fluid">
-            <div class="card">
-            <div class="card-header">
-                    <h3 class="card-title" style="font-size: 24px; font-weight: bold;">Danh sách danh mục</h3>
-                    <a href="{{ route('products.create') }}" class="btn btn-warning float-right">Thêm mới</a>
-=======
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
@@ -37,7 +28,6 @@
                 <div class="card-header">
                     <h3 class="card-title">Danh sách danh mục</h3>
                     <a style="margin-left: 20px;" href="{{ route('categories.create') }}" class="btn btn-warning">Thêm mới</a>
->>>>>>> them_gio_hang
                 </div>
                 @if (session('status'))
                 <p class="text-warning" style="margin:0px;padding:0px;margin-left:20px">
@@ -65,16 +55,6 @@
                             </tr>
                             @endforeach
                         </tbody>
-<<<<<<< HEAD
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-=======
                         <tfoot>
                             <tr>
                                 <th>Tên danh mục</th>
@@ -90,5 +70,4 @@
     </div>
     <!-- /.content -->
 </div>
->>>>>>> them_gio_hang
 @endsection

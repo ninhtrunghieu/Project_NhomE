@@ -111,10 +111,7 @@
                     </form>
 
                 </div>
-<<<<<<< HEAD
-=======
                 <!-- /.card-body -->
->>>>>>> them_gio_hang
             </div>
         </div><!-- /.container-fluid -->
     </div>
