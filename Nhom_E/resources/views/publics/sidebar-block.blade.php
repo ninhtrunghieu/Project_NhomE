@@ -1,4 +1,4 @@
-<div class="sidebar-block">
+ <div class="sidebar-block">
     <div class="title-block">Danh mục</div>
     <div class="block-content">
         @foreach($categories as $key)
