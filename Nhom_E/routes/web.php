@@ -17,6 +17,7 @@ use Illuminate\Http\Request;
 
 Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
+<<<<<<< HEAD
 Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
 Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
 
@@ -89,3 +90,12 @@ Route::prefix('products')->group(function () {
     	'uses'=>'App\Http\Controllers\ProductController@delete'
     ]);
 });
+=======
+Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
+
+Route::post('/add-to-cart', action:'App\Http\Controllers\CartController@savecart');
+Route::get('/load-cart', action:'App\Http\Controllers\CartController@loadcart');
+Route::get('/info-cart', action:'App\Http\Controllers\CartController@infocart');
+Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
+Route::get('/search', action:'App\Http\Controllers\HomeController@search');
+>>>>>>> them_gio_hang

@@ -4,26 +4,17 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-<<<<<<< HEAD
-
-    <div class="content">
-        <div class="container-fluid">
-            <div class="card">
-            <div class="card-header">
-                    <h3 class="card-title" style="font-size: 24px; font-weight: bold;">Danh sách danh mục</h3>
-                    <a href="{{ route('products.create') }}" class="btn btn-warning float-right">Thêm mới</a>
-=======
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Danh sách danh mục</h1>
+                    <h1 class="m-0 text-dark">Danh sách doanh số</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
-                        <li class="breadcrumb-item active">Danh sách danh mục</li>
+                        <li class="breadcrumb-item active">Danh sách doanh số</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -36,8 +27,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title">Danh sách danh mục</h3>
-                    <a style="margin-left: 20px;" href="{{ route('categories.create') }}" class="btn btn-warning">Thêm mới</a>
->>>>>>> them_gio_hang
+                    <a style="margin-left: 20px;" href="{{ route('statistics.create') }}" class="btn btn-warning">Thêm mới</a>
                 </div>
                 @if (session('status'))
                 <p class="text-warning" style="margin:0px;padding:0px;margin-left:20px">
@@ -48,38 +38,37 @@
                     <table id="example1" class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th>Tên danh mục</th>
-                                <th style="width:14%">Ngày tạo</th>
-                                <th style="width: 12%;">Thao tác</th>
+                                <th>Ngày tạo</th>
+                                <th>Lợi nhuận</th>
+                                <th>Chi phí</th>
+                                <th>Tổng sản phẩm bán</th>
+                                <th>Tổng hóa đơn</th>
+                                <th>Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($datas as $item)
                             <tr>
-                                <td>{{ $item->category_name }}</td>
-                                <td>{{ date("d-m-Y", strtotime($item->created_at)) }}</td>
+                                <td>{{ $item->order_date }}</td>
+                                <td>{{ number_format($item->sales) }} đồng</td>
+                                <td>{{ number_format($item->profit) }} đồng</td>
+                                <td>{{ $item->quantity }}</td>
+                                <td>{{ $item->total_order }}</td>
                                 <td>
-                                    <a href="{{ route('categories.edit',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="icon ion-android-create"></i></a>
-                                    <a href="{{ route('categories.delete',['id' => $item->id]) }}" class="btn btn-sm btn-danger"><i class="icon ion-android-delete"></i></a>
+                                    <a href="{{ route('statistics.edit',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="icon ion-android-create"></i></a>
+                                    <a href="{{ route('statistics.delete',['id' => $item->id]) }}" class="btn btn-sm btn-danger"><i class="icon ion-android-delete"></i></a>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
-<<<<<<< HEAD
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</div>
-
-=======
                         <tfoot>
                             <tr>
-                                <th>Tên danh mục</th>
-                                <th style="width:14%">Ngày tạo</th>
-                                <th style="width: 12%;">Thao tác</th>
+                                <th>Ngày tạo</th>
+                                <th>Lợi nhuận</th>
+                                <th>Chi phí</th>
+                                <th>Tổng sản phẩm bán</th>
+                                <th>Tổng hóa đơn</th>
+                                <th>Thao tác</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -90,5 +79,4 @@
     </div>
     <!-- /.content -->
 </div>
->>>>>>> them_gio_hang
 @endsection

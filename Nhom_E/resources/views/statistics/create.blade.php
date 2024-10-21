@@ -9,55 +9,53 @@
 		<div class="container-fluid">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<h1 class="m-0 text-dark">Danh sách danh mục</h1>
-<<<<<<< HEAD
-				</div>
-=======
+					<h1 class="m-0 text-dark">Thêm doanh số</h1>
 				</div><!-- /.col -->
->>>>>>> them_gio_hang
 				<div class="col-sm-6">
 					<ol class="breadcrumb float-sm-right">
 						<li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
-						<li class="breadcrumb-item active">Danh sách danh mục</li>
+						<li class="breadcrumb-item active">Thêm danh số</li>
 					</ol>
-<<<<<<< HEAD
-				</div>
-			</div>
-		</div>
-	</div>
-=======
 				</div><!-- /.col -->
 			</div><!-- /.row -->
 		</div><!-- /.container-fluid -->
 	</div>
 	<!-- /.content-header -->
->>>>>>> them_gio_hang
 	<!-- Main content -->
 	<div class="content">
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Thêm mới danh mục</h3>
+					<h3 class="card-title">Thêm mới doanh số</h3>
 				</div>
 				<div class="card-body">
-					<form role="form" action="{{ route('categories.save') }}" method="post">
+					<form role="form" action="{{ route('statistics.save') }}" method="post">
 						@csrf
 						<div class="card-body" style="padding: 0px;">
 							<div class="form-group">
-								<label>Tên danh mục</label>
-								<input type="text" name="category_name" class="form-control" placeholder="Nhập tên danh mục">
+								<label>Ngày nhập</label>
+								<input type="date" name="order_date" class="form-control">
 							</div>
 							<div class="form-group">
-								<label>Danh mục gốc</label>
-								<select class="form-control" name="parentId">
-									<option value="0">Chọn danh mục gốc</option>
-									{!! $htmlSelect !!}
-								</select>
+								<label>Chi phí</label>
+								<input type="text" name="profit" class="form-control" placeholder="Chi phí">
+							</div>
+							<div class="form-group">
+								<label>Lợi nhuận</label>
+								<input type="text" name="sales" class="form-control" placeholder="Lợi nhuận">
+							</div>
+							<div class="form-group">
+								<label>Tổng sản phẩm bán được</label>
+								<input type="text" name="quantity" class="form-control" placeholder="Tổng sản phẩm bán được">
+							</div>
+							<div class="form-group">
+								<label>Tổng đơn hàng bán được</label>
+								<input type="text" name="total_order" class="form-control" placeholder="Tổng đơn hàng">
 							</div>
 						</div>
 						<div>
-							<button type="submit" class="btn btn-primary">Thêm mới danh mục</button>
-							<a href="{{ route('categories.index') }}" class="btn btn-default">Quay lại</a>
+							<button type="submit" class="btn btn-primary">Thêm mới doanh số</button>
+							<a href="{{ route('statistics.index') }}" class="btn btn-default">Quay lại</a>
 						</div>
 					</form>
 					@if (session('status'))
@@ -66,17 +64,10 @@
 					</p>
 					@endif
 				</div>
-<<<<<<< HEAD
-			</div>
-		</div>
-	</div>
-
-=======
 				<!-- /.card-body -->
 			</div>
 		</div><!-- /.container-fluid -->
 	</div>
 	<!-- /.content -->
->>>>>>> them_gio_hang
 </div>
 @endsection
