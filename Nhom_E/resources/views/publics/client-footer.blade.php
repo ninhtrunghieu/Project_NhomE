@@ -51,7 +51,7 @@
                                         <span>Địa chỉ :</span>
                                     </div>
                                     <div class="content-contact address-contact">
-                                        <p>53 Võ Văn Ngân, Phường Linh Chiểu, Tp. Thủ Đức, tp. Hồ Chí Minh</p>
+                                        <p>Yên Mỹ, Hưng Yên, Việt Nam</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -60,7 +60,7 @@
                                         <span>Email :</span>
                                     </div>
                                     <div class="content-contact mail-contact">
-                                        <p>ninhtrunghieu29@gmail.com</p>
+                                        <p>vuchungdunghlym@gmail.com</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -69,7 +69,7 @@
                                         <span>Hotline :</span>
                                     </div>
                                     <div class="content-contact phone-contact">
-                                        <p>0337 xxx xxx</p>
+                                        <p>+0012-345-67890</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -92,7 +92,7 @@
                                 <div class="sub-title">Đăng nhập để mua hàng hoặc đăng ký tạo tài khoản
                                 </div>
                                 <div class="block-newsletter">
-                                    <form action="#">
+                                    <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post">
                                         <div class="input-group">
                                             <input type="text" class="form-control" name="email" value="" placeholder="Enter Your Email">
                                             <span class="input-group-btn">
@@ -164,7 +164,7 @@
             <div class="row">
                 <div class="text-center col-lg-12 ">
                     <span>
-                        Trường Cao Đẳng Công Nghệ Thủ Đức
+                        Copyright © 2018. Design by VuChungDung. All Rights Reserved.
                     </span>
                 </div>
             </div>
@@ -195,6 +195,38 @@
                 }
             });
         }
-        
+        onLoad();
+        $('#add-to-cart').on('click', function() {
+            var id = $(this).data('id_product');
+            var count = $('#quantity_wanted').val();
+            var count_product = $('#count_product').val();
+            if (count < 1) {
+                toastr.error('Số lượng phải lớn hơn 0!');
+            }
+            if (count > count_product - 1) {
+                toastr.error('Số lượng vượt quá só lượng cho phép!');
+            } else {
+                $.ajax({
+                    url: "{{url('/add-to-cart')}}",
+                    method: 'post',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        id,
+                        count
+                    },
+                    success: function(res) {
+                        if (res) {
+                            $('#show_cart').empty();
+                            $('#show_cart').append(res);
+                            onLoad()
+                            toastr.success('Thêm sản phẩm vào giỏ hàng thành công!');
+                        }
+                    },
+                    error: function(mess) {
+                        console.log(mess);
+                    }
+                })
+            }
+        })
     })
 </script>

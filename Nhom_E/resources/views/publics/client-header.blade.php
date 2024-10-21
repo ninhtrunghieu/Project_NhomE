@@ -6,7 +6,7 @@
                 <!-- logo -->
                 <div class="col-sm-2 col-md-2 d-flex align-items-center">
                     <div id="logo">
-                        <a href="/home">
+                        <a href="/">
                             <img class="img-fluid" src="{{ asset('client_template/img/home/logo.png') }}" alt="logo">
                         </a>
                     </div>
@@ -17,13 +17,13 @@
                     <div class="menu navbar collapse navbar-collapse">
                         <ul class="menu-top navbar-nav">
                             <li class="nav-link">
-                                <a href="/home" class="parent">Trang chủ</a>
+                                <a href="#" class="parent">Trang chủ</a>
                             </li>
                             <li>
                                 <a href="/list-product/0" class="parent">Sản phẩm</a>
                             </li>
                             <li>
-                                <a href="#" class="parent">Liên hệ</a>
+                                <a href="contact.html" class="parent">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
