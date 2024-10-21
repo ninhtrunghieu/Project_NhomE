@@ -95,7 +95,6 @@ Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 Route::post('/add-to-cart', action:'App\Http\Controllers\CartController@savecart');
 Route::get('/load-cart', action:'App\Http\Controllers\CartController@loadcart');
 <<<<<<< HEAD
-Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
 Route::get('/search', action:'App\Http\Controllers\HomeController@search');
 =======
 Route::get('/cart-detail', action:'App\Http\Controllers\CartController@detailcart');
