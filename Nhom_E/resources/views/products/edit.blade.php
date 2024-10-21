@@ -4,7 +4,7 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-    <!-- Main content -->
+   
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -92,9 +92,10 @@
                     </form>
 
                 </div>
-            
+           
             </div>
         </div>
     </div>
+
 </div>
 @endsection
