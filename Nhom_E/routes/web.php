@@ -20,5 +20,6 @@ Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 Route::get('/dashboard/index', action:'App\Http\Controllers\DashboardController@index');
 
 Route::get('/search', action:'App\Http\Controllers\HomeController@search');
+?>
 
 
