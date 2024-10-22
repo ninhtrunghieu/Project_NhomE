@@ -49,7 +49,7 @@
                                         <span>Địa chỉ :</span>
                                     </div>
                                     <div class="content-contact address-contact">
-                                        <p>Yên Mỹ, Hưng Yên, Việt Nam</p>
+                                        <p>53 Võ Văn Ngân, Phường Linh Chiểu, Tp. Thủ Đức, tp. Hồ Chí Minh</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -58,6 +58,7 @@
                                         <span>Email :</span>
                                     </div>
                                     <div class="content-contact mail-contact">
+                                        <p>ninhtrunghieu29@gmail.com</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -66,7 +67,7 @@
                                         <span>Hotline :</span>
                                     </div>
                                     <div class="content-contact phone-contact">
-                                        <p>+0012-345-67890</p>
+                                        <p>0337 xxx xxx</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -89,7 +90,7 @@
                                 <div class="sub-title">Đăng nhập để mua hàng hoặc đăng ký tạo tài khoản
                                 </div>
                                 <div class="block-newsletter">
-                                    <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post">
+                                    <form action="#" method="post">
                                         <div class="input-group">
                                                     <span>Theo dõi</span>
                                                 </button>
@@ -157,6 +158,7 @@
             <div class="row">
                 <div class="text-center col-lg-12 ">
                     <span>
+                        Trường Cao Đẳng Công Nghệ Thủ Đức
                     </span>
                 </div>
             </div>
