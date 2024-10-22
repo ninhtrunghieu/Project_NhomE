@@ -12,6 +12,11 @@
 */
 
 
+
+Route::get('/', action:'App\Http\Controllers\HomeController@index');
+Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
+
+
 Route::get('/', action: 'App\Http\Controllers\HomeController@index');
 
 Route::get('/login-admin', action: 'App\Http\Controllers\AuthController@login_index');
