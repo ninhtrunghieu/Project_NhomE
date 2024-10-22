@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/home', action:'App\Http\Controllers\HomeController@index');
+Route::get('/', action:'App\Http\Controllers\HomeController@index');
 Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 
 Route::get('/dashboard/index', action:'App\Http\Controllers\DashboardController@index');
