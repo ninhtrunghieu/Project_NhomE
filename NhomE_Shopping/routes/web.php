@@ -108,3 +108,7 @@ Route::prefix('products')->group(function () {
     	'uses'=>'App\Http\Controllers\ProductController@delete'
     ]);
 });
+Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
+Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
+
+Route::get('/search', action:'App\Http\Controllers\HomeController@search');
