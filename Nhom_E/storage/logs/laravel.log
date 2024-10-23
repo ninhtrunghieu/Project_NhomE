@@ -1,5 +1,0 @@
-#18 C:\\xampp\\htdocs\\shopping\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
-#19 C:\\xampp\\htdocs\\shopping\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
-#20 {main}
-"}
-"} 
