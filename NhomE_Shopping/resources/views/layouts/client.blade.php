@@ -57,7 +57,4 @@
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
  
 </body>
-
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:05 GMT -->
 </html>
