@@ -10,18 +10,12 @@
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0 text-dark">Danh sách hóa đơn</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
-                        <li class="breadcrumb-item active">Danh sách hóa đơn</li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+                </div>
+                
+            </div>
+        </div>
     </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
+
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -43,7 +37,7 @@
                                 <th>Tổng tiền</th>
                                 <th>Ngày gửi</th>
                                 <th style="width: 14%;">Trạng thái</th>
-                                <th style="width: 10%;">Thao tác</th>
+                                <!-- <th style="width: 10%;">Thao tác</th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -71,29 +65,21 @@
                                         @endif
                                     </button>
                                 </td>
-                                <td class="text-center">
+                                <!-- <td class="text-center">
                                     <a href="{{ route('orders.export',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="far fa-file-word"></i></a>
-                                </td>
+                                </td> -->
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <th>Họ tên</th>
-                            <th>Điện thoại</th>
-                            <th>Địa chỉ</th>
-                            <th>Tổng tiền</th>
-                            <th>Ngày gửi</th>
-                            <th>Trạng thái</th>
-                            <th>Thao tác</th>
-                        </tfoot>
+                        
                     </table>
 
                 </div>
-                <!-- /.card-body -->
+              
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </div>
-    <!-- /.content -->
+    
 </div>
 <div class="modal fade" id="modal-sm">
     <div class="modal-dialog modal-sm">
@@ -117,9 +103,8 @@
                 <button type="button" id="btn-status" class="btn btn-primary">Lưu</button>
             </div>
         </div>
-        <!-- /.modal-content -->
     </div>
-    <!-- /.modal-dialog -->
+   
 </div>
 <script src="{{ asset('admin_template/plugins/jquery/jquery.min.js') }}"></script>
 <script>

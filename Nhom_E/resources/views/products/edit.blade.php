@@ -4,30 +4,14 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Danh sách sản phẩm</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
-                        <li class="breadcrumb-item active">Danh sách sản phẩm</li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
+   
     <div class="content">
         <div class="container-fluid">
             <div class="card">
-                <div class="card-header">
-                    <h3 class="card-title">Cập nhật sản phẩm</h3>
-                </div>
+            <div class="card-header">
+                <h3 class="card-title" style="font-size: 24px; font-weight: bold;">Cập nhật sản phẩm</h3> <!-- Phóng to và bôi đậm -->
+            </div>
+
                 @if (session('status'))
                 <p class="text-warning" style="margin:0px;padding:0px">
                     {{ session('status') }}
@@ -99,11 +83,7 @@
                             <div class="form-group">
                                 <textarea class="textarea" id="myTextarea" name="content" placeholder="Place some text here" style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">{!! $item->description !!}</textarea>
                             </div>
-                            <div class="form-group">
-                                <input type="checkbox" name="homeflag" {{$item->homeflag}} > Hiển thị </br>
-                                <input type="checkbox" name="hotflag" {{$item->hotflag}} > Sản phẩm hot </br>
-                                <input type="checkbox" name="isdiscount" {{$item->isdiscount}} > Khuyến mãi </br>
-                            </div>
+                            
                         </div>
                         <div>
                             <button type="submit" class="btn btn-primary">Cập nhật sản phẩm</button>
@@ -112,10 +92,10 @@
                     </form>
 
                 </div>
-                <!-- /.card-body -->
+           
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </div>
-    <!-- /.content -->
+
 </div>
 @endsection
