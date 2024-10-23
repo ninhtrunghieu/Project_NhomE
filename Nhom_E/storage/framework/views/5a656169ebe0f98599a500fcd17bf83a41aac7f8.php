@@ -1,1 +1,0 @@
-<?php /**PATH D:\Nhom_E\resources\views/publics/footer.blade.php ENDPATH**/ ?>
