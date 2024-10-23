@@ -17,8 +17,8 @@ use Illuminate\Http\Request;
 
 Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
-// Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
-// Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
+Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
+Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
 
 
 Route::get('/admin', function () {
