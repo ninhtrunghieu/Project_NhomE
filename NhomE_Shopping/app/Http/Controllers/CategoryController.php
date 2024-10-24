@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 
 class CategoryController extends Controller
 {
+<<<<<<< HEAD
     public function __construct(Category $category){
         $this->category = $category;
         $this->htmlSelect = '';
@@ -71,6 +72,8 @@ class CategoryController extends Controller
     }
 
     public function delete($id)
+=======
+>>>>>>> don_hang
 	public function __construct(Category $category){
 		$this->category = $category;
 		$this->htmlSelect = '';

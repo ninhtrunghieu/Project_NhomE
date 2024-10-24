@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -12,6 +11,15 @@
                     <h1 class="m-0 text-dark">Danh sách hóa đơn</h1>
                 </div>
                 
+            </div>
+        </div>
+    </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
+                        <li class="breadcrumb-item active">Danh sách hóa đơn</li>
+                    </ol>
+                </div>
             </div>
         </div>
     </div>
@@ -71,11 +79,11 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        
+                       
                     </table>
 
                 </div>
-              
+
             </div>
         </div>
     </div>
@@ -103,8 +111,9 @@
                 <button type="button" id="btn-status" class="btn btn-primary">Lưu</button>
             </div>
         </div>
+       
     </div>
-   
+
 </div>
 <script src="{{ asset('admin_template/plugins/jquery/jquery.min.js') }}"></script>
 <script>
