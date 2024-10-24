@@ -34,3 +34,5 @@ class AuthController extends Controller
         return View();
     }
 }
+Session::put('customer', [$customer]); // Đảm bảo lưu dưới dạng mảng
+

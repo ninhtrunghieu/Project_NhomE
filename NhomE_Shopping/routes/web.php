@@ -19,8 +19,8 @@ Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
 Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
 Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
-Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 
+Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
 Route::get('/admin', function () {
     $user = Session::get('user_admin');
     if(!$user){
@@ -56,14 +56,13 @@ Route::get('/search', action:'App\Http\Controllers\HomeController@search');
 Route::get('/user-info', action:'App\Http\Controllers\CustomerController@userinfo');
 Route::get('/order-info', action:'App\Http\Controllers\CustomerController@get_order');
 Route::get('/order-trash/{id}', action:'App\Http\Controllers\OrderController@trash');
-
 Route::prefix('orders')->group(function () {
     Route::post('/save-order', [
     	'as'=>'orders.save',
     	'uses'=>'App\Http\Controllers\OrderController@save'
     ]);
     Route::post('/change-status', [
-    	'as'=>'orders.status',
+'as'=>'orders.status',
     	'uses'=>'App\Http\Controllers\OrderController@change'
     ]);
     Route::get('/export-to-word/{id}', [
@@ -75,9 +74,6 @@ Route::prefix('orders')->group(function () {
     	'uses'=>'App\Http\Controllers\OrderController@index'
     ]);
 });
-
-
-//Danh mục
 
 Route::prefix('categories')->group(function () {
     Route::get('/index', [
@@ -106,8 +102,6 @@ Route::prefix('categories')->group(function () {
     ]);
 });
 
-
-//sản phẩm
 Route::prefix('statistics')->group(function () {
     Route::get('/index', [
     	'as'=>'statistics.index',
@@ -161,8 +155,3 @@ Route::prefix('products')->group(function () {
     	'uses'=>'App\Http\Controllers\ProductController@delete'
     ]);
 });
-
-Route::get('/list-product/{id}', action:'App\Http\Controllers\HomeController@list');
-
-Route::get('/search', action:'App\Http\Controllers\HomeController@search');
-

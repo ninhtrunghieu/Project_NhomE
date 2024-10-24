@@ -8,7 +8,6 @@
     <!-- footer -->
 
     @include('publics.client-footer')
-
     <!-- back top top -->
     <div class="back-to-top">
         <a href="#">

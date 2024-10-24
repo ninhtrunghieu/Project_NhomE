@@ -61,7 +61,7 @@
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#">
+                                            <a href="{{ route('products.index') }}">
                                                 <span>Danh sách sản phẩm</span>
                                             </a>
                                         </li>
