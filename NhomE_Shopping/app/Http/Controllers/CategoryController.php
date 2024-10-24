@@ -17,7 +17,7 @@ class CategoryController extends Controller
 
 	public function index(Request $request)
 	{
-		$perPage = $request->get('per_page', 10);
+		$perPage = $request->get('per_page', 10); // Sử dụng phân trang
 		$datas = Category::paginate($perPage);
 		return view('categories.index', compact('datas'));
 	}
@@ -102,5 +102,4 @@ class CategoryController extends Controller
 			return redirect('/categories/index')->with('status', 'Cập nhật thất bại!');
 		}
 	}
-
 }
