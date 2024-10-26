@@ -4,6 +4,7 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
@@ -11,15 +12,6 @@
                     <h1 class="m-0 text-dark">Danh sách hóa đơn</h1>
                 </div>
                 
-            </div>
-        </div>
-    </div>
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
-                        <li class="breadcrumb-item active">Danh sách hóa đơn</li>
-                    </ol>
-                </div>
             </div>
         </div>
     </div>
@@ -45,7 +37,7 @@
                                 <th>Tổng tiền</th>
                                 <th>Ngày gửi</th>
                                 <th style="width: 14%;">Trạng thái</th>
-                                <!-- <th style="width: 10%;">Thao tác</th> -->
+                                <th style="width: 10%;">Thao tác</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,17 +65,21 @@
                                         @endif
                                     </button>
                                 </td>
-                                <!-- <td class="text-center">
-                                    <a href="{{ route('orders.export',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="far fa-file-word"></i></a>
-                                </td> -->
+                                <td class="text-center">
+                                    <!-- Nút xuất hóa đơn ra file Word với thiết kế nổi bật -->
+                                    <a href="{{ route('orders.export', ['id' => $item->id]) }}" class="btn btn-sm btn-outline-primary d-flex align-items-center justify-content-center gap-2" title="Xuất hóa đơn Word">
+                                        <i class="far fa-file-word"></i> <span>Xuất Word</span>
+                                    </a>
+                                </td>
+
                             </tr>
                             @endforeach
                         </tbody>
-                       
+                        
                     </table>
 
                 </div>
-
+              
             </div>
         </div>
     </div>
@@ -111,9 +107,8 @@
                 <button type="button" id="btn-status" class="btn btn-primary">Lưu</button>
             </div>
         </div>
-       
     </div>
-
+   
 </div>
 <script src="{{ asset('admin_template/plugins/jquery/jquery.min.js') }}"></script>
 <script>
