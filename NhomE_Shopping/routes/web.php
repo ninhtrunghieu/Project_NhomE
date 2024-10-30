@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,17 +19,35 @@ use Illuminate\Http\Request;
 
 Route::get('/', action:'App\Http\Controllers\HomeController@index');
 
-Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
-Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
+// Route::get('/login-admin', action:'App\Http\Controllers\AuthController@login_index');
+// Route::post('/login-admin', action:'App\Http\Controllers\AuthController@login_post');
 
-Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
+// Route::get('/detail/{id}', action:'App\Http\Controllers\HomeController@detail');
+// Route::get('/admin', function () {
+//     $user = Session::get('user_admin');
+//     if(!$user){
+//         return redirect('/login-admin');
+//     }
+//     else{
+//         return view('admin');
+//     }
+//     return view('admin');
+// });
+// Trang đăng nhập và xử lý đăng nhập
+Route::get('/login-admin', [App\Http\Controllers\AuthController::class, 'login_index'])->name('login-admin');
+Route::post('/login-admin', [App\Http\Controllers\AuthController::class, 'login_post']);
+
+// Route để đăng xuất
+Route::get('/logout', [App\Http\Controllers\AuthController::class, 'logout'])->name('logout');
+
+// Trang chi tiết sản phẩm
+Route::get('/detail/{id}', [App\Http\Controllers\HomeController::class, 'detail']);
+
+// Trang admin với kiểm tra đăng nhập
 Route::get('/admin', function () {
     $user = Session::get('user_admin');
-    if(!$user){
-        return redirect('/login-admin');
-    }
-    else{
-        return view('admin');
+    if (!$user) {
+        return redirect()->route('login-admin');
     }
     return view('admin');
 });
