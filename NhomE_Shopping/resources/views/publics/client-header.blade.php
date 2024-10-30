@@ -17,10 +17,10 @@
                     <div class="menu navbar collapse navbar-collapse">
                         <ul class="menu-top navbar-nav">
                             <li class="nav-link">
-                                <a href="/" class="parent">Trang chủ</a>
+                                <a href="#" class="parent">Trang chủ</a>
                             </li>
                             <li>
-                                <a href="/list-product/0" class="parent">Danh mục </a>
+                                <a href="/list-product/0" class="parent">Sản phẩm</a>
                             </li>
                             <li>
                                 <a href="contact.html" class="parent">Liên hệ</a>
@@ -62,13 +62,6 @@
                                     </a>
                                 </div>
                                 @endif
-
-                                <div>
-                                    <a class="check-out" href="/order-info" rel="nofollow" title="Checkout">
-                                        <i class="fa fa-check" aria-hidden="true"></i>
-                                        <span>Thông tin đặt hàng</span>
-                                    </a>
-                                </div>
                                 @if(!Session::get('customer'))
                                 <div>
                                     <a class="login" href="/login" rel="nofollow" title="Log in to your customer account">

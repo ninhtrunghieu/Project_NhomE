@@ -103,7 +103,7 @@
             <div class="row">
                 <div class="text-center col-lg-12 ">
                     <span>
-                        Copyright © 2024. Design by NgThanhHung. All Rights Reserved.
+                        Copyright © 2024. Design by NHOM_E. All Rights Reserved.
                     </span>
                 </div>
             </div>

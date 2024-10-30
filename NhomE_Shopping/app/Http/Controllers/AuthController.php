@@ -33,6 +33,31 @@ class AuthController extends Controller
 
         return View();
     }
+
+    //Xử lý trang đăng nhập
+    // public function login_post(Request $request){
+    //     // Xác thực thông tin người dùng
+    //     $credentials = $request->only('email', 'password');
+        
+    //     if (Auth::attempt($credentials)) {
+    //         // Lưu thông tin người dùng vào session
+    //         Session::put('user_admin', Auth::user());
+    //         return redirect('/admin')->with('success', 'Đăng nhập thành công!');
+    //     }
+
+    //     // Trả về lỗi nếu đăng nhập không thành công
+    //     return back()->withErrors(['login' => 'Email hoặc mật khẩu không chính xác']);
+    // }
+    // // Đăng xuất người dùng
+    // public function logout()
+    // {
+    //     Auth::logout();
+    //     Session::forget('user_admin');
+    //     return redirect('/login-admin');
+    // }
+
+
+    
 }
-Session::put('customer', [$customer]); // Đảm bảo lưu dưới dạng mảng
+// Session::put('customer', [$customer]); // Đảm bảo lưu dưới dạng mảng
 
