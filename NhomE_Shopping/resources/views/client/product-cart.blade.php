@@ -136,12 +136,12 @@
                                                 </ul>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Cập nhập giỏ hàng</button>
-                                       </form>
-                                        
-                                    </div>
-                                    <a href="/info-cart" class="continue btn btn-primary pull-right">
-                                        Tiếp tục
+                                            <a href="/info-cart" class="continue btn btn-primary pull-right">
+                                        ĐẶT HÀNG
                                     </a>
+                                       </form>
+                                    </div>
+                                    
                                 </div>
                                 <div class="cart-grid-right col-xs-12 col-lg-3">
                                     <div class="cart-summary" style="margin-top: 78px; height:286px">
@@ -169,28 +169,6 @@
                                                 <span class="value">{{number_format($totalMoney)}} VNĐ</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="block-reassurance">
-                                        <ul>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check1.png')}}" alt="Security policy (edit with Customer reassurance module)">
-                                                    <span>Chính sách bảo mật(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check2.png')}}" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Giao hàng an toàn(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check3.png')}}" alt="Return policy (edit with Customer reassurance module)">
-                                                    <span>Chính sách hoàn trả(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
