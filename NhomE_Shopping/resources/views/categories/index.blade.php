@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 <div class="content-wrapper">
-
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -49,8 +48,9 @@
                                     <td>
                                         <a href="{{ route('categories.edit', ['id' => $item->id]) }}"
                                             class="btn btn-sm btn-success"><i class="icon ion-android-create"></i></a>
-                                        <a href="{{ route('categories.delete', ['id' => $item->id]) }}"
-                                            class="btn btn-sm btn-danger"><i class="icon ion-android-delete"></i></a>
+                                        <button class="btn btn-sm btn-danger" onclick="showDeleteModal('{{ route('categories.delete', ['id' => $item->id]) }}')">
+                                            <i class="icon ion-android-delete"></i>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -64,4 +64,37 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Xác nhận xóa -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa danh mục này không?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Thêm Bootstrap JS nếu chưa có -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showDeleteModal(deleteUrl) {
+        // Gán liên kết vào nút Xác nhận trong modal
+        document.getElementById('confirmDeleteBtn').setAttribute('href', deleteUrl);
+        // Hiển thị modal
+        $('#deleteModal').modal('show');
+    }
+</script>
+
 @endsection
