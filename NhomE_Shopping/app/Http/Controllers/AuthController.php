@@ -34,6 +34,18 @@ class AuthController extends Controller
         return View();
     }
 
+    public function logout(Request $request)
+    {
+        Auth::logout(); // Đăng xuất người dùng
+
+        // Invalidate và regenerate CSRF token để bảo mật
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // Chuyển hướng về trang login hoặc trang chủ
+        return redirect('/login-admin');
+    }
+
     //Xử lý trang đăng nhập
     // public function login_post(Request $request){
     //     // Xác thực thông tin người dùng

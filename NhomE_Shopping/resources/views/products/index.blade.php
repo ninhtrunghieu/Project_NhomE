@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3 class="card-title" style="font-size: 24px; font-weight: bold;">Danh sách sản phẩm</h3>
-                    <a href="#" class="btn btn-warning float-right">Thêm mới</a>
+                    <a href="{{ route('products.create') }}" class="btn btn-warning float-right">Thêm mới</a>
                 </div>
 
                 @if (session('status'))
@@ -40,12 +40,11 @@
                                 <td>{{ $item->quatity }}</td>
                                 <td style="font-weight:600;color:red">{{ number_format($item->price) }} đồng</td>
                                 <td style="font-weight:500;color:green">{{ number_format($item->discount) }} đồng</td>
-                                
                                 <td>
                                     <a href="{{ route('products.edit',['id' => $item->id]) }}" class="btn btn-sm btn-success"><i class="icon ion-android-create"></i></a>
-
-                                    <!-- Nút xóa với modal xác nhận -->
-                                    <button class="btn btn-sm btn-danger" onclick="showDeleteModal({{ $item->id }})"><i class="icon ion-android-delete"></i></button>
+                                    <button class="btn btn-sm btn-danger" onclick="showDeleteModal('{{ route('products.delete', ['id' => $item->id]) }}')">
+                                        <i class="icon ion-android-delete"></i>
+                                    </button>
                                 </td>
                             </tr>
                             @endforeach
@@ -55,43 +54,38 @@
             </div>
         </div>
     </div>
-
 </div>
 
-<!-- Modal Xác Nhận Xóa -->
+<!-- Modal Xác nhận xóa -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">Xác nhận xóa</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 Bạn có chắc chắn muốn xóa sản phẩm này không?
             </div>
             <div class="modal-footer">
-                <form id="deleteForm" action="" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
-                    <button type="submit" class="btn btn-danger">Xóa</button>
-                </form>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <a href="#" id="confirmDeleteBtn" class="btn btn-danger">Xác nhận</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Thêm JavaScript để hiển thị modal -->
-<script type="text/javascript">
-    function showDeleteModal(id) {
-        const form = document.getElementById('deleteForm');
-        form.action = `/products/delete/${id}`; // Thiết lập đường dẫn đến hành động xóa
-        var modal = new bootstrap.Modal(document.getElementById('deleteModal'));
-        modal.show(); // Hiện modal
-    }
-</script>
-
 <!-- Thêm Bootstrap JS nếu chưa có -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showDeleteModal(deleteUrl) {
+        // Gán liên kết vào nút Xác nhận trong modal
+        document.getElementById('confirmDeleteBtn').setAttribute('href', deleteUrl);
+        // Hiển thị modal
+        $('#deleteModal').modal('show');
+    }
+</script>
 
 @endsection

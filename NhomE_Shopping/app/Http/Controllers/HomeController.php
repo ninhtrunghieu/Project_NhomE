@@ -54,17 +54,36 @@ class HomeController extends Controller
                             'kitchen_room'=>$kitchen_room,
                             'list_sale'=>$list_sale]);
     }
+    // public function detail($id){
+    //     $item = $this->product->join('product_owners', 'products.ownerId', '=', 'product_owners.id')
+    //                           ->join('categories', 'products.categoryId', '=', 'categories.id')
+    //                           ->select('products.*', 'categories.category_name', 'product_owners.owner_name')
+    //                           ->find($id);
+    //     $datas = $this->product->where([
+    //             ['categoryId', '=', $item->categoryId],
+    //             ['id', '<>', $item->id]])->take(3)->get();
+    //     $categories = Category::where('parentId',0)->get();
+    //     return view('client.detail',['item'=>$item,'datas'=>$datas,'categories'=>$categories]);
+    // }
     public function detail($id){
         $item = $this->product->join('product_owners', 'products.ownerId', '=', 'product_owners.id')
                               ->join('categories', 'products.categoryId', '=', 'categories.id')
                               ->select('products.*', 'categories.category_name', 'product_owners.owner_name')
                               ->find($id);
+        
+        // Kiểm tra nếu $item là null
+        if (!$item) {
+            // Xử lý nếu không tìm thấy sản phẩm, ví dụ: hiển thị thông báo lỗi hoặc chuyển hướng
+            return redirect()->back()->with('error', 'Product not found');
+        }
+        
         $datas = $this->product->where([
                 ['categoryId', '=', $item->categoryId],
                 ['id', '<>', $item->id]])->take(3)->get();
         $categories = Category::where('parentId',0)->get();
         return view('client.detail',['item'=>$item,'datas'=>$datas,'categories'=>$categories]);
     }
+    
     public function list($id){
         if($id == 0){
             $datas = $this->product->paginate(12);
