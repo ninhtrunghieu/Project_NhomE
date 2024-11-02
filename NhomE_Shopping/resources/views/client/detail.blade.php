@@ -57,7 +57,7 @@
                                 <div class="breadcrumb">
                                     <ol>
                                         <li>
-                                            <a href="/">
+                                            <a href="#">
                                                 <span>Trang chủ</span>
                                             </a>
                                         </li>
@@ -95,7 +95,7 @@
                                                     <div class="item col-md-12">
                                                         <div class="product-miniature item-one first-item d-flex">
                                                             <div class="thumbnail-container border">
-                                                                <a href="/detail/{{$value->id}}">
+                                                                <a href="product-detail.html">
                                                                     <img class="img-fluid image-cover" src="/images/{{ $value->images }}" alt="img">
                                                                     <img class="img-fluid image-secondary" src="/images/{{ $value->images }}" alt="img">
                                                                 </a>

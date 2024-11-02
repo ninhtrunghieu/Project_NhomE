@@ -17,7 +17,7 @@
                     <div class="menu navbar collapse navbar-collapse">
                         <ul class="menu-top navbar-nav">
                             <li class="nav-link">
-                                <a href="/" class="parent">Trang chủ</a>
+                                <a href="#" class="parent">Trang chủ</a>
                             </li>
                             <li>
                                 <a href="/list-product/0" class="parent">Sản phẩm</a>

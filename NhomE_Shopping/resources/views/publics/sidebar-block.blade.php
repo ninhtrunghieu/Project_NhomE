@@ -11,11 +11,13 @@
             <div class="subCategory collapse" id="{{$key->id}}" aria-expanded="true" role="status">
                 @foreach($key->categoryChildren as $subItem)
                 <div class="cateTitle">
-                    <a href="/list-product/{{$subItem->id}}" class="cateItem">{{$subItem->category_name}}</a>
+                    <a href="/list-product/{{$key->id}}" class="cateItem">{{$subItem->category_name}}</a>
                 </div>
                 @endforeach
             </div>
         </div>
         @endforeach
+
+
     </div>
 </div>
