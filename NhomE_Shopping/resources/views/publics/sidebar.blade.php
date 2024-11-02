@@ -47,7 +47,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link text-light">
+          <a href="{{ route('statistics.index') }}" class="nav-link text-light">
+
             <i class="nav-icon fas fa-dollar-sign text-light"></i>
             <p class="ml-2">
               Doanh số
