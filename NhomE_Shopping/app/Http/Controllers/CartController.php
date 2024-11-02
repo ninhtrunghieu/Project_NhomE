@@ -8,6 +8,7 @@ use App\Models\Product;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
 use PHPUnit\Util\Json;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class CartController extends Controller
 {
@@ -70,7 +71,7 @@ class CartController extends Controller
             $total = $total + $item["product_count"]*$item["product_price"];
             $responseHTML .= '<div class="cart-content"> <table> <tbody> <tr> <td class="product-image"> <a href="product-detail.html"> <img src="/images/'.$item['product_img'].'" alt="Product"> </a> </td> <td> <div class="product-name"> <a href="product-detail.html">'.$item['product_name'].'</a> </div> <div> '.$item['product_count'].' x <span class="product-price">'.number_format($item['product_price']).' VNĐ</span> </div> </td> <td class="action"> <a class="remove" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i> </a> </td> </tr>';
         }
-        $responseHTML .= '<tr class="total"> <td colspan="2">Total:</td> <td>'.number_format($total).'VNĐ </td> </tr> <tr> <td colspan="3" class="d-flex justify-content-center"> <div class="cart-button"> <a href="/cart-detail" title="View Cart">Xem giỏ hàng</a> <a href="/cart-checkout" title="Checkout">Thanh toán</a> </div> </td> </tr>';
+        $responseHTML .= '<tr class="total"> <td colspan="2">Total:</td> <td>'.number_format($total).'VNĐ </td> </tr> <tr> <td colspan="3" class="d-flex justify-content-center"> <div class="cart-button"> <a href="/cart-detail" title="View Cart">Xem giỏ hàng</a> <a href="/info-cart" title="Checkout">Thanh toán</a> </div> </td> </tr>';
         print_r($responseHTML);
     }
     public function loadcart()
@@ -84,21 +85,43 @@ class CartController extends Controller
                 $responseHTML .= '<tr> <td class="product-image"> <a href="product-detail.html"> <img src="/images/'.$item['product_img'].'" alt="Product"> </a> </td> <td> <div class="product-name"> <a href="product-detail.html">'.$item['product_name'].'</a> </div> <div> <span id="xcount">'.$item['product_count'].'</span> x <span class="product-price">'.number_format($item['product_price']).' VNĐ</span> </div> </td> <td class="action"> <a class="remove" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i> </a> </td> </tr>';
             }
             $responseHTML .= '<tr class="total"> <td colspan="2">Tổng tiền:</td> <td>'.number_format($total).'VNĐ </td> </tr> <tr> <td colspan="3" class="d-flex justify-content-center"> <div class="cart-button"> <a href="/cart-detail" title="View Cart">Xem giỏ hàng</a> <a href="/info-cart" title="Checkout">Thanh toán</a> </div> </td> </tr>';
-
             
         }
         print_r($responseHTML);
     }
-    public function detailcart(){
-        $data = Session::get('cart');
+    public function detailcart(Request $request) {
+        $data = Session::get('cart', []);
         $totalMoney = 0;
         $totalCount = 0;
-        foreach($data as $total){
-            $totalMoney = $totalMoney +(integer)$total["product_price"]*(integer)$total["product_count"];
-            $totalCount = $totalCount + (integer)$total["product_count"];
+    
+        foreach ($data as $total) {
+            $totalMoney += (integer)$total["product_price"] * (integer)$total["product_count"];
+            $totalCount += (integer)$total["product_count"];
         }
-        return View('client.product-cart',['data'=>$data,'totalMoney'=>$totalMoney,'totalCount'=>$totalCount]);
+    
+        // Lấy số trang từ query string, mặc định là 1
+        $currentPage = $request->input('page', 1);
+        $perPage = 4;
+    
+        // Tạo một bộ dữ liệu cho trang hiện tại
+        $currentPageData = array_slice($data, ($currentPage - 1) * $perPage, $perPage);
+    
+        // Tạo LengthAwarePaginator
+        $paginator = new LengthAwarePaginator(
+            $currentPageData,
+            count($data),
+            $perPage,
+            $currentPage,
+            ['path' => $request->url(), 'query' => $request->query()]
+        );
+    
+        return view('client.product-cart', [
+            'data' => $paginator,
+            'totalMoney' => $totalMoney,
+            'totalCount' => $totalCount,
+        ]);
     }
+    
     public function infocart(){
         $data = Session::get('cart');
         $totalMoney = 0;

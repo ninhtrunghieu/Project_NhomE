@@ -4,9 +4,7 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
       <div class="image">
-
         <img src="{{ asset('admin_template/images/admin-avatar.png') }}" class="img-circle elevation-2" alt="Admin Image">
-
       </div>
       <div class="info ml-2">
         <a href="#" class="d-block text-light font-weight-bold">ADMIN</a>
@@ -67,7 +65,6 @@
 </aside>
 
 <style>
-
 /* Tăng kích cỡ và thêm khoảng cách cho icon */
 .nav-sidebar .nav-icon {
     font-size: 1.2rem;

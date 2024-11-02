@@ -82,7 +82,6 @@
                                             <ul class="nav nav-inline">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="tab" href="#checkout-guest-form">
-
                                                         ĐẶT HÀNG
                                                     </a>
                                                 </li>
@@ -97,16 +96,12 @@
                                                             <input class="form-control" name="email" type="email" placeholder="Nhập địa chỉ email" required>
                                                         </div>
                                                         <div class="form-group row">
-
                                                             <input class="form-control" name="phone" type="phone" placeholder="Nhập số điện thoại khách hàng" required>
-
                                                         </div>
                                                         <div class="form-group row">
                                                             <input class="form-control" name="address" type="text" placeholder="Nhập địa chỉ khách hàng" required>
                                                         </div>
-
                                                         <input type="submit" class="btn btn-primary pull-xs-right" style="margin-top:10px" value="Đặt hàng">
-
                                                     </form>
                                                 </div>
                                             </div>
@@ -187,7 +182,6 @@
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
     <script>
         $('#myForm').on('submit', function(e) {
-
         e.preventDefault();
     
         var name = $('input[name="name"]').val();
@@ -262,5 +256,4 @@
     });
     </script>
 </body>
-
 </html>

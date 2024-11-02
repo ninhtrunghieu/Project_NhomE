@@ -136,14 +136,21 @@
                                                 </ul>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Cập nhập giỏ hàng</button>
-
-                                            <a href="/info-cart" class="continue btn btn-primary pull-right">
-                                        ĐẶT HÀNG
-                                    </a>
+                                            <a href="/info-cart" class="continue btn btn-primary pull-right">ĐẶT HÀNG</a>
+                                            <br>
+                                            
+                                            <!-- Phân trang -->
+                                            @if($data->hasPages())
+                                                <div class="pagination justify-content-center">
+                                                    <div class="js-product-list-top">
+                                                        <div style="margin-top: 14px;" class="d-flex justify-content-around row">
+                                                            {{ $data->links() }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
                                        </form>
                                     </div>
-                                    
-
                                 </div>
                                 <div class="cart-grid-right col-xs-12 col-lg-3">
                                     <div class="cart-summary" style="margin-top: 78px; height:286px">
@@ -217,8 +224,4 @@
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
     <!-- Template JS -->
 </body>
-
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:56 GMT -->
-
 </html>
