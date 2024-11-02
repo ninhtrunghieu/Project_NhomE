@@ -136,12 +136,14 @@
                                                 </ul>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Cập nhập giỏ hàng</button>
+
                                             <a href="/info-cart" class="continue btn btn-primary pull-right">
                                         ĐẶT HÀNG
                                     </a>
                                        </form>
                                     </div>
                                     
+
                                 </div>
                                 <div class="cart-grid-right col-xs-12 col-lg-3">
                                     <div class="cart-summary" style="margin-top: 78px; height:286px">

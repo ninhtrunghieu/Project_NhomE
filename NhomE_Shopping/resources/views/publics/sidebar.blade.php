@@ -4,7 +4,9 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex align-items-center">
       <div class="image">
+
         <img src="{{ asset('admin_template/images/admin-avatar.png') }}" class="img-circle elevation-2" alt="Admin Image">
+
       </div>
       <div class="info ml-2">
         <a href="#" class="d-block text-light font-weight-bold">ADMIN</a>
@@ -15,7 +17,9 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="#" class="nav-link text-light">
+
+          <a href="{{ route('dashboard.index') }}" class="nav-link text-light">
+
             <i class="nav-icon fas fa-chart-pie text-light"></i>
             <p class="ml-2">
               Theo dõi & Thống kê
@@ -47,7 +51,9 @@
           </a>
         </li>
         <li class="nav-item">
+
           <a href="{{ route('statistics.index') }}" class="nav-link text-light">
+
 
             <i class="nav-icon fas fa-dollar-sign text-light"></i>
             <p class="ml-2">
@@ -61,6 +67,7 @@
 </aside>
 
 <style>
+
 /* Tăng kích cỡ và thêm khoảng cách cho icon */
 .nav-sidebar .nav-icon {
     font-size: 1.2rem;
@@ -92,4 +99,4 @@
 .user-panel .info a:hover {
     color: #ddd;
 }
-</style>
+

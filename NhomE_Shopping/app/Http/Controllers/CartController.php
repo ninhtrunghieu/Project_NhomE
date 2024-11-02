@@ -84,6 +84,7 @@ class CartController extends Controller
                 $responseHTML .= '<tr> <td class="product-image"> <a href="product-detail.html"> <img src="/images/'.$item['product_img'].'" alt="Product"> </a> </td> <td> <div class="product-name"> <a href="product-detail.html">'.$item['product_name'].'</a> </div> <div> <span id="xcount">'.$item['product_count'].'</span> x <span class="product-price">'.number_format($item['product_price']).' VNĐ</span> </div> </td> <td class="action"> <a class="remove" href="#"> <i class="fa fa-trash-o" aria-hidden="true"></i> </a> </td> </tr>';
             }
             $responseHTML .= '<tr class="total"> <td colspan="2">Tổng tiền:</td> <td>'.number_format($total).'VNĐ </td> </tr> <tr> <td colspan="3" class="d-flex justify-content-center"> <div class="cart-button"> <a href="/cart-detail" title="View Cart">Xem giỏ hàng</a> <a href="/info-cart" title="Checkout">Thanh toán</a> </div> </td> </tr>';
+
             
         }
         print_r($responseHTML);
