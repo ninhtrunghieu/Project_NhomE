@@ -90,16 +90,16 @@
                                                 <div class="tab-pane fade in active show" id="checkout-guest-form" role="tabpanel">
                                                     <form id="myForm">
                                                         <div class="form-group row">
-                                                            <input class="form-control" name="name" type="text" placeholder="Nhập họ tên khách hàng" >
+                                                            <input class="form-control" name="name" type="text" placeholder="Nhập họ tên khách hàng" required>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <input class="form-control" name="email" type="email" placeholder="Nhập địa chỉ email" >
+                                                            <input class="form-control" name="email" type="email" placeholder="Nhập địa chỉ email" required>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <input class="form-control" name="phone" type="phone" placeholder="Nhập số điện thoại khách hàng" >
+                                                            <input class="form-control" name="phone" type="phone" placeholder="Nhập số điện thoại khách hàng" required>
                                                         </div>
                                                         <div class="form-group row">
-                                                            <input class="form-control" name="address" type="text" placeholder="Nhập địa chỉ khách hàng" >
+                                                            <input class="form-control" name="address" type="text" placeholder="Nhập địa chỉ khách hàng" required>
                                                         </div>
                                                         <input type="submit" class="btn btn-primary pull-xs-right" style="margin-top:10px" value="Đặt hàng">
                                                     </form>
@@ -256,8 +256,4 @@
 });
     </script>
 </body>
-
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:57 GMT -->
-
 </html>
