@@ -182,78 +182,78 @@
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
     <script>
         $('#myForm').on('submit', function(e) {
-    e.preventDefault();
+        e.preventDefault();
     
-    var name = $('input[name="name"]').val();
-    var email = $('input[name="email"]').val();
-    var address = $('input[name="address"]').val();
-    var phone = $('input[name="phone"]').val();
+        var name = $('input[name="name"]').val();
+        var email = $('input[name="email"]').val();
+        var address = $('input[name="address"]').val();
+        var phone = $('input[name="phone"]').val();
     
-    // Biến để lưu trạng thái hợp lệ
-    var isValid = true;
-    var messages = [];
+        // Biến để lưu trạng thái hợp lệ
+        var isValid = true;
+        var messages = [];
 
-    // Kiểm tra trường "tên"
-    if (name.length < 8 || name.length > 30) {
-        isValid = false;
-        messages.push("Tên phải từ 8 đến 30 ký tự.");
-    }
-
-    // Kiểm tra trường "email"
-    if (email.length > 20 || !/^[A-Za-z0-9._%+-]+@gmail\.com$/.test(email)) {
-        isValid = false;
-        messages.push("Email phải có tối đa 20 ký tự và đuôi '@gmail.com'.");
-    }
-
-    // Kiểm tra trường "số điện thoại"
-    if (!/^\d{10}$/.test(phone)) {
-        isValid = false;
-        messages.push("Số điện thoại phải từ 0-9 và gồm 10 chữ số.");
-    }
-
-    // Kiểm tra trường "địa chỉ"
-    if (address.length > 50) {
-        isValid = false;
-        messages.push("Địa chỉ không được quá 50 ký tự.");
-    }
-
-    // Hiển thị thông báo lỗi nếu không hợp lệ
-    if (!isValid) {
-        toastr.error("Có lỗi xảy ra:\n" + messages.join("\n"));
-        return;
-    }
-
-    // Nếu tất cả hợp lệ, gửi dữ liệu qua AJAX
-    $.ajax({
-        url: "{{url('/orders/save-order')}}",
-        method: 'post',
-        data: {
-            "_token": "{{ csrf_token() }}",
-            name,
-            email,
-            address,
-            phone
-        },
-        success: function(res) {
-            if (res) {
-                toastr.success('Đặt hàng thành công!');
-                $('#show_cart').empty();
-                $('input[name="name"]').val("");
-                $('input[name="address"]').val("");
-                $('input[name="email"]').val("");
-                $('input[name="phone"]').val("");
-                $('#a').html("Có tổng 0 sản phẩm trong giỏ hàng");
-                $('#b').html(0);
-                $('#c').html(0);
-            } else {
-                toastr.warning('Giỏ hàng đang bị trống!');
-            }
-        },
-        error: function(mess) {
-            console.log(mess);
+        // Kiểm tra trường "tên"
+        if (name.length < 8 || name.length > 30) {
+            isValid = false;
+            messages.push("Tên phải từ 8 đến 30 ký tự.");
         }
+
+        // Kiểm tra trường "email"
+        if (email.length > 20 || !/^[A-Za-z0-9._%+-]+@gmail\.com$/.test(email)) {
+            isValid = false;
+            messages.push("Email phải có đuôi '@gmail.com', tối đa 20 ký tự.");
+        }
+
+        // Kiểm tra trường "số điện thoại"
+        if (!/^\d{10}$/.test(phone)) {
+            isValid = false;
+            messages.push("Số điện thoại phải từ 0-9 và gồm 10 chữ số.");
+        }
+
+        // Kiểm tra trường "địa chỉ"
+        if (address.length < 8 || address.length > 60) {
+            isValid = false;
+            messages.push("Địa chỉ từ 10 ký tự và tối đa 60 ký tự.");
+        }
+
+        // Hiển thị thông báo lỗi nếu không hợp lệ
+        if (!isValid) {
+            toastr.error("Có lỗi xảy ra:\n" + messages.join("\n"));
+            return;
+        }
+
+        // Nếu tất cả hợp lệ, gửi dữ liệu qua AJAX
+        $.ajax({
+            url: "{{url('/orders/save-order')}}",
+            method: 'post',
+            data: {
+                "_token": "{{ csrf_token() }}",
+                name,
+                email,
+                address,
+                phone
+            },
+            success: function(res) {
+                if (res) {
+                    $('#show_cart').empty();
+                    toastr.success('Đặt hàng thành công!');
+                    $('input[name="name"]').val("");
+                    $('input[name="address"]').val("");
+                    $('input[name="email"]').val("");
+                    $('input[name="phone"]').val("");
+                    $('#a').html("Có tổng 0 sản phẩm trong giỏ hàng");
+                    $('#b').html(0);
+                    $('#c').html(0);
+                } else {
+                    toastr.warning('Giỏ hàng đang bị trống!');
+                }
+            },
+            error: function(mess) {
+                console.log(mess);
+            }
+        });
     });
-});
     </script>
 </body>
 </html>
