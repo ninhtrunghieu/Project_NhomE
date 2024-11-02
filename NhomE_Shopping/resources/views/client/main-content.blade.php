@@ -122,7 +122,7 @@
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
                                                                         <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
                                                                         </form>
@@ -182,7 +182,7 @@
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
                                                                         <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
                                                                         </form>
@@ -242,7 +242,7 @@
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
                                                                         <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                            <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
                                                                         </form>
@@ -341,7 +341,7 @@
                                                                         <div class="product-buttons d-flex justify-content-center">
                                                                             <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
                                                                                 <input type="hidden" name="id_product" value="1">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
                                                                             </form>
@@ -450,7 +450,7 @@
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
                                                                             <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
                                                                             </form>
@@ -510,7 +510,7 @@
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
                                                                             <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
                                                                             </form>
@@ -570,7 +570,7 @@
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
                                                                             <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <a class="add-to-cart" href="/add-to-cart" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
                                                                             </form>
