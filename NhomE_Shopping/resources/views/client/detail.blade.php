@@ -57,9 +57,7 @@
                                 <div class="breadcrumb">
                                     <ol>
                                         <li>
-
-                                            <a href="/">
-
+                                            <a href="#">
                                                 <span>Trang chủ</span>
                                             </a>
                                         </li>
@@ -97,10 +95,7 @@
                                                     <div class="item col-md-12">
                                                         <div class="product-miniature item-one first-item d-flex">
                                                             <div class="thumbnail-container border">
-
-
-                                                                <a href="/detail/{{$value->id}}">
-
+                                                                <a href="product-detail.html">
                                                                     <img class="img-fluid image-cover" src="/images/{{ $value->images }}" alt="img">
                                                                     <img class="img-fluid image-secondary" src="/images/{{ $value->images }}" alt="img">
                                                                 </a>
@@ -276,5 +271,8 @@
     <!-- Template JS -->
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
 </body>
+
+
+<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:54 GMT -->
 
 </html>
