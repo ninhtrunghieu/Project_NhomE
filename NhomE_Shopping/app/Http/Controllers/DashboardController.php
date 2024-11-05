@@ -41,8 +41,4 @@ class DashboardController extends Controller
         $result = json_encode($chart);
         return json_decode($result);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> TheoDoi_ThongKe
 }
