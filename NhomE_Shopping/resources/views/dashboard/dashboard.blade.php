@@ -28,8 +28,15 @@
                 <div class="card-header">
                     <h3 class="card-title">Biểu đồ danh số</h3>
                     <a style="margin-left: 20px;" id="btn-filter" class="btn btn-warning">Lọc</a>
+<<<<<<< HEAD
                     <input type="date" style="display:inline;width:200px" value="2020-09-20" class="form-control" name="start" id="start">
                     <input type="date" style="display: inline;width:200px" value="2020-09-30" class="form-control" name="end" id="end">
+=======
+                    <input type="date" style="display:inline;width:200px" value="2024-09-20" class="form-control"
+                        name="start" id="start">
+                    <input type="date" style="display: inline;width:200px" value="2024-09-30" class="form-control"
+                        name="end" id="end">
+>>>>>>> TheoDoi_ThongKe
                 </div>
                 <div class="card-body">
                     <div id="myfirstchart" style="height: 250px;"></div>
@@ -76,4 +83,5 @@
     })
     
 </script>
+
 @endsection
