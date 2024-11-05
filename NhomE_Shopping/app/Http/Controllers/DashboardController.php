@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Statistical;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -22,32 +21,23 @@ class DashboardController extends Controller
     }
     public function get(Request $request)
     {
-        $start = $request->input('start');
-        $end = $request->input('end');
+        $data = $request->all();
+        $start = $data['start'];
+        $end = $data['end'];
 
-        // Lấy dữ liệu thống kê trong khoảng thời gian từ $start đến $end
-        $get = $this->statistical->whereBetween('order_date', [$start, $end])
-            ->orderBy('order_date', 'ASC')
-            ->get();
-
-        // Kiểm tra xem dữ liệu có trống hay không
-        if ($get->isEmpty()) {
-            return response()->json(['error' => 'Không có dữ liệu cho khoảng thời gian đã chọn.']);
+        $get = $this->statistical->whereBetween('order_date',[$start,$end])
+                                 ->orderBy('order_date','ASC')->get();
+        
+        foreach($get as $value){
+            $chart[] = array(
+                'period' =>$value->order_date,
+                'order'=>$value->total_order,
+                'sales'=>$value->sales,
+                'profit'=>$value->profit,
+                'quantity'=>$value->quantity
+            );
         }
-
-        // Chuẩn bị dữ liệu cho biểu đồ
-        $chart = [];
-        foreach ($get as $value) {
-            $chart[] = [
-                'period' => $value->order_date,
-                'order' => $value->total_order,
-                'sales' => $value->sales,
-                'profit' => $value->profit,
-                'quantity' => $value->quantity
-            ];
-        }
-
-        // Trả về dữ liệu JSON
-        return response()->json($chart);
+        $result = json_encode($chart);
+        return json_decode($result);
     }
 }
