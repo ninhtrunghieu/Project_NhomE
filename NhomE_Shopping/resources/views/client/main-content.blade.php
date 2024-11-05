@@ -121,7 +121,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                        <form action="#" method="post" class="formAddToCart">
                                                                             <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
@@ -146,7 +146,7 @@
                                                         <div class="item text-center">
                                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                                 <div class="thumbnail-container">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="/detail/{{$item2->id}}">
                                                                         <img class="img-fluid image-cover" src="/images/{{$item2->images}}" alt="img">
                                                                         <img class="img-fluid image-secondary" src="/images/{{$item2->images}}" alt="img">
                                                                     </a>
@@ -181,7 +181,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                        <form action="#" method="post" class="formAddToCart">
                                                                             <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
@@ -206,7 +206,7 @@
                                                         <div class="item text-center">
                                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                                 <div class="thumbnail-container">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="/detail/{{$item3->id}}">
                                                                         <img class="img-fluid image-cover" src="/images/{{$item3->images}}" alt="img">
                                                                         <img class="img-fluid image-secondary" src="/images/{{$item3->images}}" alt="img">
                                                                     </a>
@@ -241,7 +241,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                        <form action="#" method="post" class="formAddToCart">
                                                                             <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                             </a>
@@ -300,7 +300,7 @@
                                                     <p> Chào mừng khách hàng đến với cửa hàng của chúng tôi. Chúc quý khách mua sắm vui vẻ!
                                                     </p>
                                                     <div>
-                                                        <a href="product-grid-sidebar-left.html"> Xem thêm </a>
+                                                        <a href="#"> Xem thêm </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -314,7 +314,7 @@
                                                             <div class="item text-center">
                                                                 <div style="border-bottom: none;" class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$sale->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$sale->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$sale->images}}" alt="img">
                                                                         </a>
@@ -339,7 +339,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                            <form action="#" method="post" class="formAddToCart">
                                                                                 <input type="hidden" name="id_product" value="1">
                                                                                 <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -388,7 +388,7 @@
                                                         </li>
                                                         @endforeach
                                                         <li class="last float-right">
-                                                            <a href="product-grid-sidebar-left.html">Xem thêm</a>
+                                                            <a href="#">Xem thêm</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -414,7 +414,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature first-item js-product-miniature item-one">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="/detail/{{$item1->id}}">
+                                                                        <a href="/detail/{{$item5->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item5->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item5->images}}" alt="img">
                                                                         </a>
@@ -449,7 +449,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                            <form action="#" method="post" class="formAddToCart">
                                                                                 <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
@@ -474,7 +474,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$item6->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item6->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item6->images}}" alt="img">
                                                                         </a>
@@ -509,7 +509,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                            <form action="#" method="post" class="formAddToCart">
                                                                                 <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
@@ -534,7 +534,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$item7->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item7->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item7->images}}" alt="img">
                                                                         </a>
@@ -569,7 +569,7 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                            <form action="#" method="post" class="formAddToCart">
                                                                                 <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                 </a>
