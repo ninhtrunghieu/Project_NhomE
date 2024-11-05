@@ -217,10 +217,8 @@ Route::get('/user-order', [CustomerController::class, 'get_order']);
 Route::post('/register-post', [CustomerController::class, 'register_post']);
 
 Route::get('/logout', [CustomerController::class, 'logout']);
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-Route::post('/dashboard/get', [DashboardController::class, 'get'])->name('dashboard.get');
-
-
+Route::get('/dashboard/index', [DashboardController::class, 'index']);
+Route::post('/dashboard/get', [DashboardController::class, 'get']);
 
 Route::get('/search', [HomeController::class, 'search']);
 
