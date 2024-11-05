@@ -13,7 +13,7 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                         <li class="breadcrumb-item active">Thống kê</li>
                     </ol>
                 </div><!-- /.col -->
@@ -28,8 +28,10 @@
                 <div class="card-header">
                     <h3 class="card-title">Biểu đồ danh số</h3>
                     <a style="margin-left: 20px;" id="btn-filter" class="btn btn-warning">Lọc</a>
-                    <input type="date" style="display:inline;width:200px" value="2020-09-20" class="form-control" name="start" id="start">
-                    <input type="date" style="display: inline;width:200px" value="2020-09-30" class="form-control" name="end" id="end">
+                    <input type="date" style="display:inline;width:200px" value="2024-09-20" class="form-control"
+                        name="start" id="start">
+                    <input type="date" style="display: inline;width:200px" value="2024-09-30" class="form-control"
+                        name="end" id="end">
                 </div>
                 <div class="card-body">
                     <div id="myfirstchart" style="height: 250px;"></div>
@@ -45,34 +47,45 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 <script>
-    $(document).ready(function(){
+    $(document).ready(function () {
+        // Khởi tạo biểu đồ rỗng
         var chart = Morris.Bar({
             element: 'myfirstchart',
-            data:[],
+            data: [],
             xkey: 'period',
-            ykeys: ['order','sales','profit','quantity'],
-            labels: ['Đơn hàng','Doanh số','Lợi nhuận','Số lượng']
+            ykeys: ['order', 'sales', 'profit', 'quantity'],
+            labels: ['Đơn hàng', 'Doanh số', 'Lợi nhuận', 'Số lượng']
         });
-        $('#btn-filter').on('click', function() {
-        var start = $('#start').val();
-        var end = $('#end').val();
-        $.ajax({
-            url: "{{url('/dashboard/get')}}",
-            method: 'post',
-            data: {
-                "_token": "{{ csrf_token() }}",
-                start,
-                end
-            },
-            success: function(res) {
-                console.log(res);
-                chart.setData(res);
-            },
-            error: function(mess) {
-                console.log(mess);
-            }
-        })
-    })
-    })
+
+        // Xử lý sự kiện khi nhấn nút Lọc
+        $('#btn-filter').on('click', function () {
+            var start = $('#start').val();
+            var end = $('#end').val();
+
+            $.ajax({
+                url: "{{ route('dashboard.get') }}",
+                method: 'POST',
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                    start: start,
+                    end: end
+                },
+                success: function (res) {
+                    if (res.error) {
+                        // Hiển thị thông báo lỗi nếu không có dữ liệu
+                        alert(res.error);
+                        chart.setData([]); // Xóa dữ liệu biểu đồ nếu không có dữ liệu
+                    } else {
+                        // Cập nhật biểu đồ với dữ liệu mới
+                        chart.setData(res);
+                    }
+                },
+                error: function (mess) {
+                    console.log("Lỗi:", mess);
+                }
+            });
+        });
+    });
 </script>
+
 @endsection
