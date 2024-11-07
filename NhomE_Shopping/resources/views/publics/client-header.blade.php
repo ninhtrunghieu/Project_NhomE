@@ -1,5 +1,4 @@
 <header>
-    <!-- header desktop -->
     <div class="header-top d-xs-none ">
         <div class="container">
             <div class="row">
