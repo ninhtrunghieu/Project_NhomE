@@ -94,7 +94,7 @@
                                                             <!--  product left content: image-->
                                                             <div class="product-line-grid-left col-md-2">
                                                                 <span class="product-image media-middle">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="">
                                                                         <img class="img-fluid" src="/images/{{$item['product_img']}}" alt="Organic Strawberry Fruits">
                                                                     </a>
                                                                 </span>
@@ -136,12 +136,21 @@
                                                 </ul>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Cập nhập giỏ hàng</button>
+                                            <a href="/info-cart" class="continue btn btn-primary pull-right">ĐẶT HÀNG</a>
+                                            <br>
+                                            
+                                            <!-- Phân trang -->
+                                            @if($data->hasPages())
+                                                <div class="pagination justify-content-center">
+                                                    <div class="js-product-list-top">
+                                                        <div style="margin-top: 14px;" class="d-flex justify-content-around row">
+                                                            {{ $data->links() }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endif
                                        </form>
-                                        
                                     </div>
-                                    <a href="/info-cart" class="continue btn btn-primary pull-right">
-                                        Tiếp tục
-                                    </a>
                                 </div>
                                 <div class="cart-grid-right col-xs-12 col-lg-3">
                                     <div class="cart-summary" style="margin-top: 78px; height:286px">
@@ -169,28 +178,6 @@
                                                 <span class="value">{{number_format($totalMoney)}} VNĐ</span>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div id="block-reassurance">
-                                        <ul>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check1.png')}}" alt="Security policy (edit with Customer reassurance module)">
-                                                    <span>Chính sách bảo mật(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check2.png')}}" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Giao hàng an toàn(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="{{asset('client_template/img/product/check3.png')}}" alt="Return policy (edit with Customer reassurance module)">
-                                                    <span>Chính sách hoàn trả(CHỈNH SỬA VỚI BẢO HIỂM KHÁCH HÀNG)</span>
-                                                </div>
-                                            </li>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -237,8 +224,4 @@
     <script src="{{ asset('client_template/js/theme.js') }}"></script>
     <!-- Template JS -->
 </body>
-
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:56 GMT -->
-
 </html>

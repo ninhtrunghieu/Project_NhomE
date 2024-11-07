@@ -54,13 +54,13 @@
                                                 <ul class="d-flex align-items-start flex-column">
                                                     @foreach($living_room as $item)
                                                     <li>
-                                                        <a href="product-grid-sidebar-left.html">{{ $item-> category_name}}</a>
+                                                        <a href="#">{{ $item-> category_name}}</a>
                                                     </li>
                                                     @endforeach
 
 
                                                     <li class="last float-right">
-                                                        <a href="product-grid-sidebar-left.html">View all</a>
+                                                        <a href="#">View all</a>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -102,7 +102,7 @@
                                                                 <div class="product-description">
                                                                     <div class="product-groups">
                                                                         <div class="product-title">
-                                                                            <a href="product-detail.html">{{$item1->name}}</a>
+                                                                            <a href="">{{$item1->name}}</a>
                                                                         </div>
                                                                         <div class="rating">
                                                                             <div class="star-content">
@@ -115,8 +115,7 @@
                                                                         </div>
                                                                         <div class="product-group-price">
                                                                             <div class="product-price-and-shipping">
-                                                                                <span class="price">{{number_format($item1->price)}} VNĐ</span>
-                                                                                <!-- <del class="regular-price">£28.68</del> -->
+                                                                                <span class="price">{{number_format($item1->price)}} VNĐ</span>                                                                           
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -236,7 +235,6 @@
                                                                         <div class="product-group-price">
                                                                             <div class="product-price-and-shipping">
                                                                                 <span class="price">{{$item3->price}}</span>
-                                                                                <!-- <del class="regular-price">£28.68</del> -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -384,7 +382,7 @@
                                                     <ul class="d-flex align-items-start flex-column">
                                                         @foreach($kitchen_room as $item4)
                                                         <li>
-                                                            <a href="product-grid-sidebar-left.html">{{ $item4-> category_name}}</a>
+                                                            <a href="#">{{ $item4-> category_name}}</a>
                                                         </li>
                                                         @endforeach
                                                         <li class="last float-right">
@@ -564,7 +562,6 @@
                                                                             <div class="product-group-price">
                                                                                 <div class="product-price-and-shipping">
                                                                                     <span class="price">{{$item7->price}}</span>
-                                                                                    <!-- <del class="regular-price">£28.68</del> -->
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -617,8 +614,6 @@
                             </div>
                         </div>                      
                     </div>
-                    <!-- recent posts -->
-                    
                 </section>
             </div>
         </div>

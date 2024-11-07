@@ -15,7 +15,7 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="#" class="nav-link text-light">
+          <a href="/dashboard/index" class="nav-link text-light">
             <i class="nav-icon fas fa-chart-pie text-light"></i>
             <p class="ml-2">
               Theo dõi & Thống kê

@@ -23,7 +23,7 @@
                                 <a href="/list-product/0" class="parent">Sản phẩm</a>
                             </li>
                             <li>
-                                <a href="contact.html" class="parent">Liên hệ</a>
+                                <a href="#" class="parent">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
