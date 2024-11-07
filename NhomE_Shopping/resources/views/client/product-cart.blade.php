@@ -94,7 +94,7 @@
                                                             <!--  product left content: image-->
                                                             <div class="product-line-grid-left col-md-2">
                                                                 <span class="product-image media-middle">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="">
                                                                         <img class="img-fluid" src="/images/{{$item['product_img']}}" alt="Organic Strawberry Fruits">
                                                                     </a>
                                                                 </span>
