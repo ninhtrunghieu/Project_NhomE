@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
+
 <html lang="zxx">
 
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:45 GMT -->
 
 <head>
     <!-- Basic Page Needs -->
