@@ -16,13 +16,13 @@
         <div class="section banner">
             <div class="tiva-slideshow-wrapper">
                 <div id="tiva-slideshow" class="nivoSlider">
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner1.jpg')}}" title="#caption1" alt="Slideshow image">
                     </a>
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner2.jpg')}}" title="#caption2" alt="Slideshow image">
                     </a>
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner3.jpg')}}" title="#caption3" alt="Slideshow image">
                     </a>
                 </div>
@@ -43,31 +43,14 @@
                             <div class="tiva-row-wrap row">
                                 <div class="groupcategoriestab-vertical col-md-12 col-xs-12">
                                     <div class="grouptab row">
-                                        <div class="categoriestab-right col-lg-3 align-items-start d-flex flex-column col-md-3 flex-3">
-                                            <div class="block-title-content">
-                                                <h2 class="title-block">
+                                        
+                                        <div class="categoriestab-left product-tab col-md-12 flex-9">
+                                            <div class="title-tab-content d-flex justify-content-start">
+                                                <h2 class="title-room col-md-4"
+                                                    style="font-size: 40px; font-weight: bold; color: #333; text-align: center; margin-right: 50px;">
                                                     Phòng khách
                                                 </h2>
-                                            </div>
-                                            <!-- <div class="btn dropdown-toggle toggle-cate-child-vertical hidden-md-up mr-auto">Select category</div> -->
-                                            <div class="cate-child-vertical">
-                                                <ul class="d-flex align-items-start flex-column">
-                                                    @foreach($living_room as $item)
-                                                    <li>
-                                                        <a href="#">{{ $item-> category_name}}</a>
-                                                    </li>
-                                                    @endforeach
-
-
-                                                    <li class="last float-right">
-                                                        <a href="#">View all</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="categoriestab-left product-tab col-md-9 flex-9">
-                                            <div class="title-tab-content d-flex justify-content-start">
-                                                <ul class="nav nav-tabs">
+                                                <ul class="nav nav-tabs col-md-8"> 
                                                     <li>
                                                         <a href="#new" data-toggle="tab" class="active">Sản phẩm mới</a>
                                                     </li>
@@ -123,19 +106,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="#" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -183,19 +154,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="#" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -242,19 +201,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="#" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -340,20 +287,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="#" method="post" class="formAddToCart">
-                                                                                <input type="hidden" name="id_product" value="1">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -375,28 +309,13 @@
                                 <div class="tiva-row-wrap row">
                                     <div class="groupcategoriestab-vertical col-md-12 col-xs-12">
                                         <div class="grouptab row">
-                                            <!-- column 3 -->
-                                            <div class="categoriestab-right col-lg-3 align-items-start d-flex flex-column col-md-3 flex-3">
-                                                <div class="block-title-content">
-                                                    <h2 class="title-block">
-                                                        Phòng bếp
-                                                    </h2>
-                                                </div>
-                                                <div class="cate-child-vertical">
-                                                    <ul class="d-flex align-items-start flex-column">
-                                                        @foreach($kitchen_room as $item4)
-                                                        <li>
-                                                            <a href="#">{{ $item4-> category_name}}</a>
-                                                        </li>
-                                                        @endforeach
-                                                        <li class="last float-right">
-                                                            <a href="#">Xem thêm</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="categoriestab-left product-tab col-md-9 flex-9">
+                                            
+                                            <div class="categoriestab-left product-tab col-md-12 flex-9">
                                                 <div class="title-tab-content d-flex justify-content-start">
+                                                <h2 class="title-room col-md-4"
+                                                    style="font-size: 40px; font-weight: bold; color: #333; text-align: center; margin-right: 50px;">
+                                                    Phòng Bếp
+                                                </h2>
                                                     <ul class="nav nav-tabs">
                                                         <li>
                                                             <a href="#new1" data-toggle="tab" class="active">Sản phẩm mới</a>
@@ -449,19 +368,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="#" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -509,19 +416,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="#" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -568,19 +463,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="#" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
