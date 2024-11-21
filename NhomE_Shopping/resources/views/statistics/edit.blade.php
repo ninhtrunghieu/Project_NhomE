@@ -16,12 +16,10 @@
 						<li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
 						<li class="breadcrumb-item active">Chỉnh sửa doanh số</li>
 					</ol>
-				</div><!-- /.col -->
-			</div><!-- /.row -->
-		</div><!-- /.container-fluid -->
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- /.content-header -->
-	<!-- Main content -->
 	<div class="content">
 		<div class="container-fluid">
 			<div class="card">
@@ -36,13 +34,14 @@
 								<label>Ngày nhập</label>
 								<input type="date" value="{{ $item -> order_date }}" name="order_date" class="form-control">
 							</div>
-							<div class="form-group">
-								<label>Chi phí</label>
-								<input type="text" name="profit" value="{{ $item -> profit }}" class="form-control" placeholder="Chi phí">
-							</div>
+
 							<div class="form-group">
 								<label>Lợi nhuận</label>
 								<input type="text" name="sales" value="{{ $item -> sales }}" class="form-control" placeholder="Lợi nhuận">
+							</div>
+							<div class="form-group">
+								<label>Chi phí</label>
+								<input type="text" name="profit" value="{{ $item -> profit }}" class="form-control" placeholder="Chi phí">
 							</div>
 							<div class="form-group">
 								<label>Tổng sản phẩm bán được</label>
@@ -54,7 +53,7 @@
 							</div>
 						</div>
 						<div>
-							<button type="submit" class="btn btn-primary">Cập nhật doanh số</button>
+							<button type="submit" class="btn btn-primary" >Cập nhật doanh số</button>
 							<a href="{{ route('statistics.index') }}" class="btn btn-default">Quay lại</a>
 						</div>
 					</form>
@@ -64,10 +63,8 @@
 					</p>
 					@endif
 				</div>
-				<!-- /.card-body -->
 			</div>
-		</div><!-- /.container-fluid -->
+		</div>
 	</div>
-	<!-- /.content -->
 </div>
 @endsection

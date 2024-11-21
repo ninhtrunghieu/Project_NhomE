@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
 <html lang="en">
 
 
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-grid-sidebar-left.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:19:19 GMT -->
 
 <head>
     <!-- Basic Page Needs -->
@@ -142,7 +137,7 @@
                                                                     </div>
                                                                 </div>
                                                                 <div class="product-buttons d-flex justify-content-center">
-                                                                    <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
+                                                                    <form action="#" method="post" class="formAddToCart">
                                                                         <input type="hidden" name="id_product" value="1">
                                                                         <a class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>

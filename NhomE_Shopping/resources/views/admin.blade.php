@@ -15,11 +15,7 @@
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
                     </ol>
-                    <!-- Form đăng xuất -->
-                    <form method="POST" action="{{ route('logout') }}" class="ml-3">
-                        @csrf
-                        <button type="submit" class="btn btn-danger">Đăng xuất</button>
-                    </form>
+                
                 </div>
             </div>
         </div>

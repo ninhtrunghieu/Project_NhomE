@@ -1,5 +1,4 @@
 <header>
-    <!-- header desktop -->
     <div class="header-top d-xs-none ">
         <div class="container">
             <div class="row">
@@ -17,13 +16,13 @@
                     <div class="menu navbar collapse navbar-collapse">
                         <ul class="menu-top navbar-nav">
                             <li class="nav-link">
-                                <a href="#" class="parent">Trang chủ</a>
+                                <a href="/" class="parent">Trang chủ</a>
                             </li>
                             <li>
                                 <a href="/list-product/0" class="parent">Sản phẩm</a>
                             </li>
                             <li>
-                                <a href="contact.html" class="parent">Liên hệ</a>
+                                <a href="#" class="parent">Liên hệ</a>
                             </li>
                         </ul>
                     </div>

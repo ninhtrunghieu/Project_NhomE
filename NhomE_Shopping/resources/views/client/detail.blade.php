@@ -1,12 +1,7 @@
 <!DOCTYPE html>
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
+
 <html lang="zxx">
 
-
-<!-- Mirrored from demo1.cloodo.com/html/furnitica/product-detail.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 21 Feb 2021 10:15:45 GMT -->
 
 <head>
     <!-- Basic Page Needs -->
@@ -57,7 +52,7 @@
                                 <div class="breadcrumb">
                                     <ol>
                                         <li>
-                                            <a href="#">
+                                            <a href="/">
                                                 <span>Trang chủ</span>
                                             </a>
                                         </li>
@@ -95,7 +90,7 @@
                                                     <div class="item col-md-12">
                                                         <div class="product-miniature item-one first-item d-flex">
                                                             <div class="thumbnail-container border">
-                                                                <a href="product-detail.html">
+                                                                <a href="/detail/{{$value->id}}">
                                                                     <img class="img-fluid image-cover" src="/images/{{ $value->images }}" alt="img">
                                                                     <img class="img-fluid image-secondary" src="/images/{{ $value->images }}" alt="img">
                                                                 </a>

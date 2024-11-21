@@ -16,13 +16,13 @@
         <div class="section banner">
             <div class="tiva-slideshow-wrapper">
                 <div id="tiva-slideshow" class="nivoSlider">
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner1.jpg')}}" title="#caption1" alt="Slideshow image">
                     </a>
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner2.jpg')}}" title="#caption2" alt="Slideshow image">
                     </a>
-                    <a href="#">
+                    <a>
                         <img class="img-responsive" src="{{asset('client_template/img/home/home1-banner3.jpg')}}" title="#caption3" alt="Slideshow image">
                     </a>
                 </div>
@@ -43,31 +43,14 @@
                             <div class="tiva-row-wrap row">
                                 <div class="groupcategoriestab-vertical col-md-12 col-xs-12">
                                     <div class="grouptab row">
-                                        <div class="categoriestab-right col-lg-3 align-items-start d-flex flex-column col-md-3 flex-3">
-                                            <div class="block-title-content">
-                                                <h2 class="title-block">
+                                        
+                                        <div class="categoriestab-left product-tab col-md-12 flex-9">
+                                            <div class="title-tab-content d-flex justify-content-start">
+                                                <h2 class="title-room col-md-4"
+                                                    style="font-size: 40px; font-weight: bold; color: #333; text-align: center; margin-right: 50px;">
                                                     Phòng khách
                                                 </h2>
-                                            </div>
-                                            <!-- <div class="btn dropdown-toggle toggle-cate-child-vertical hidden-md-up mr-auto">Select category</div> -->
-                                            <div class="cate-child-vertical">
-                                                <ul class="d-flex align-items-start flex-column">
-                                                    @foreach($living_room as $item)
-                                                    <li>
-                                                        <a href="product-grid-sidebar-left.html">{{ $item-> category_name}}</a>
-                                                    </li>
-                                                    @endforeach
-
-
-                                                    <li class="last float-right">
-                                                        <a href="product-grid-sidebar-left.html">View all</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="categoriestab-left product-tab col-md-9 flex-9">
-                                            <div class="title-tab-content d-flex justify-content-start">
-                                                <ul class="nav nav-tabs">
+                                                <ul class="nav nav-tabs col-md-8"> 
                                                     <li>
                                                         <a href="#new" data-toggle="tab" class="active">Sản phẩm mới</a>
                                                     </li>
@@ -102,7 +85,9 @@
                                                                 <div class="product-description">
                                                                     <div class="product-groups">
                                                                         <div class="product-title">
-                                                                            <a href="product-detail.html">{{$item1->name}}</a>
+
+                                                                            <a href="#">{{$item1->name}}</a>
+
                                                                         </div>
                                                                         <div class="rating">
                                                                             <div class="star-content">
@@ -115,24 +100,13 @@
                                                                         </div>
                                                                         <div class="product-group-price">
                                                                             <div class="product-price-and-shipping">
+
                                                                                 <span class="price">{{number_format($item1->price)}} VNĐ</span>
-                                                                                <!-- <del class="regular-price">£28.68</del> -->
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -146,7 +120,7 @@
                                                         <div class="item text-center">
                                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                                 <div class="thumbnail-container">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="/detail/{{$item2->id}}">
                                                                         <img class="img-fluid image-cover" src="/images/{{$item2->images}}" alt="img">
                                                                         <img class="img-fluid image-secondary" src="/images/{{$item2->images}}" alt="img">
                                                                     </a>
@@ -180,19 +154,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -206,7 +168,7 @@
                                                         <div class="item text-center">
                                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                                 <div class="thumbnail-container">
-                                                                    <a href="product-detail.html">
+                                                                    <a href="/detail/{{$item3->id}}">
                                                                         <img class="img-fluid image-cover" src="/images/{{$item3->images}}" alt="img">
                                                                         <img class="img-fluid image-secondary" src="/images/{{$item3->images}}" alt="img">
                                                                     </a>
@@ -236,23 +198,10 @@
                                                                         <div class="product-group-price">
                                                                             <div class="product-price-and-shipping">
                                                                                 <span class="price">{{$item3->price}}</span>
-                                                                                <!-- <del class="regular-price">£28.68</del> -->
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </form>
-                                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                        </a>
-                                                                        <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                        </a>
-                                                                    </div>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -300,7 +249,7 @@
                                                     <p> Chào mừng khách hàng đến với cửa hàng của chúng tôi. Chúc quý khách mua sắm vui vẻ!
                                                     </p>
                                                     <div>
-                                                        <a href="product-grid-sidebar-left.html"> Xem thêm </a>
+                                                        <a href="#"> Xem thêm </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -314,7 +263,7 @@
                                                             <div class="item text-center">
                                                                 <div style="border-bottom: none;" class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$sale->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$sale->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$sale->images}}" alt="img">
                                                                         </a>
@@ -338,20 +287,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <input type="hidden" name="id_product" value="1">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -373,28 +309,13 @@
                                 <div class="tiva-row-wrap row">
                                     <div class="groupcategoriestab-vertical col-md-12 col-xs-12">
                                         <div class="grouptab row">
-                                            <!-- column 3 -->
-                                            <div class="categoriestab-right col-lg-3 align-items-start d-flex flex-column col-md-3 flex-3">
-                                                <div class="block-title-content">
-                                                    <h2 class="title-block">
-                                                        Phòng bếp
-                                                    </h2>
-                                                </div>
-                                                <div class="cate-child-vertical">
-                                                    <ul class="d-flex align-items-start flex-column">
-                                                        @foreach($kitchen_room as $item4)
-                                                        <li>
-                                                            <a href="product-grid-sidebar-left.html">{{ $item4-> category_name}}</a>
-                                                        </li>
-                                                        @endforeach
-                                                        <li class="last float-right">
-                                                            <a href="product-grid-sidebar-left.html">Xem thêm</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="categoriestab-left product-tab col-md-9 flex-9">
+                                            
+                                            <div class="categoriestab-left product-tab col-md-12 flex-9">
                                                 <div class="title-tab-content d-flex justify-content-start">
+                                                <h2 class="title-room col-md-4"
+                                                    style="font-size: 40px; font-weight: bold; color: #333; text-align: center; margin-right: 50px;">
+                                                    Phòng Bếp
+                                                </h2>
                                                     <ul class="nav nav-tabs">
                                                         <li>
                                                             <a href="#new1" data-toggle="tab" class="active">Sản phẩm mới</a>
@@ -414,7 +335,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature first-item js-product-miniature item-one">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="/detail/{{$item1->id}}">
+                                                                        <a href="/detail/{{$item5->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item5->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item5->images}}" alt="img">
                                                                         </a>
@@ -444,23 +365,10 @@
                                                                             <div class="product-group-price">
                                                                                 <div class="product-price-and-shipping">
                                                                                     <span class="price">{{number_format($item5->price)}} VNĐ</span>
-                                                                                    <!-- <del class="regular-price">£28.68</del> -->
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -474,7 +382,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$item6->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item6->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item6->images}}" alt="img">
                                                                         </a>
@@ -508,19 +416,7 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -534,7 +430,7 @@
                                                             <div class="item text-center">
                                                                 <div class="product-miniature js-product-miniature item-one first-item">
                                                                     <div class="thumbnail-container">
-                                                                        <a href="product-detail.html">
+                                                                        <a href="/detail/{{$item7->id}}">
                                                                             <img class="img-fluid image-cover" src="/images/{{$item7->images}}" alt="img">
                                                                             <img class="img-fluid image-secondary" src="/images/{{$item7->images}}" alt="img">
                                                                         </a>
@@ -564,23 +460,10 @@
                                                                             <div class="product-group-price">
                                                                                 <div class="product-price-and-shipping">
                                                                                     <span class="price">{{$item7->price}}</span>
-                                                                                    <!-- <del class="regular-price">£28.68</del> -->
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="product-buttons d-flex justify-content-center">
-                                                                            <form action="http://demo1.cloodo.com/html/furnitica/index.html" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="#" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
-                                                                        </div>
+                                                                        
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -617,8 +500,6 @@
                             </div>
                         </div>                      
                     </div>
-                    <!-- recent posts -->
-                    
                 </section>
             </div>
         </div>

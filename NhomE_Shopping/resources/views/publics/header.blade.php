@@ -8,6 +8,13 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
+        
       </div>
     </form>
+    <!-- Form đăng xuất -->
+    <form method="POST" action="{{ route('logout') }}" class="ml-3">
+    @csrf
+    <button type="submit" class="btn btn-outline-danger">Đăng xuất</button>
+</form>
+
 </nav>

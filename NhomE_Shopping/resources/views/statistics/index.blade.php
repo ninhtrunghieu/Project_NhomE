@@ -13,15 +13,13 @@
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="/home">Trang chủ</a></li>
+                        <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
                         <li class="breadcrumb-item active">Danh sách doanh số</li>
                     </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- /.content-header -->
-    <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
             <div class="card">
@@ -61,22 +59,10 @@
                             </tr>
                             @endforeach
                         </tbody>
-                        <tfoot>
-                            <tr>
-                                <th>Ngày tạo</th>
-                                <th>Lợi nhuận</th>
-                                <th>Chi phí</th>
-                                <th>Tổng sản phẩm bán</th>
-                                <th>Tổng hóa đơn</th>
-                                <th>Thao tác</th>
-                            </tr>
-                        </tfoot>
                     </table>
                 </div>
-                <!-- /.card-body -->
             </div>
-        </div><!-- /.container-fluid -->
+        </div>
     </div>
-    <!-- /.content -->
 </div>
 @endsection
