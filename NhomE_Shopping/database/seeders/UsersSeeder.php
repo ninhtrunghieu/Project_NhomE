@@ -3,7 +3,8 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class UsersSeeder extends Seeder
 {
@@ -14,15 +15,11 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'id' => 1,
-            'name' => 'Nguyễn Thanh Hùng',
-            'email' => 'thanhhungg@gmail.com',
-            'email_verified_at' => null,
-            'password' => 'thanhhungg',
-            'remember_token' => null,
-            'created_at' => '2024-10-16 17:31:10',
-            'updated_at' => '2024-10-03 17:31:16',
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin123'), // Mật khẩu mã hóa
         ]);
+
     }
 }

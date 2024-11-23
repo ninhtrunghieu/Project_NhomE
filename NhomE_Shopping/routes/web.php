@@ -15,11 +15,8 @@ use App\Http\Controllers\ProductController;
 
 
 // Trang đăng nhập và xử lý đăng nhập
-Route::get('/login-admin', [AuthController::class, 'login_index'])->name('login-admin');
-Route::post('/login-admin', [AuthController::class, 'login_post']);
-
-// Route để đăng xuất
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/login-admin', [AuthController::class, 'login_index'])->name('login.index');
+Route::post('/login-admin', [AuthController::class, 'login_post'])->name('login.post');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Trang admin với kiểm tra đăng nhập

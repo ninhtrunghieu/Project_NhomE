@@ -44,7 +44,9 @@ class CreateProductsTable extends Migration
     public function down()
     {
         // Xóa FULLTEXT index (nếu cần trước khi xóa bảng)
-        DB::statement('ALTER TABLE products DROP INDEX name_description_fulltext');
+        if (DB::select("SHOW INDEX FROM products WHERE Key_name = 'name_description_fulltext'")) {
+            DB::statement('ALTER TABLE products DROP INDEX name_description_fulltext');
+        }
         Schema::dropIfExists('products');
     }
 }
